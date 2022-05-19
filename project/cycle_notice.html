@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울자전거 따릉이 - 무인대여시스템</title>
+    <meta name="title" content="서울자전거 따릉이 - 무인대여시스템">
+    <meta name="keywords" content=" 저탄소 자전거, 자전거, 서울 자전거, 따릉이, 서울 따릉이">
+    <meta name="description" content="누구나 쉽고 편리하게 이용할 수 있는 저탄소 이동수단 서울자전거 따릉이">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/samsung.ico">
+    <!--common-->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/cycle_common.css">
+    <link rel="stylesheet" href="../assets/css/cycle_notice.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--swiper-->
+    <link rel="stylesheet" href="../assets/css/swiper.min.css"/>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('.btnMenu_m').click(function() {
+                $(".monav_black").fadeIn(300);
+            });
+            
+            $('.btnclose_m').click(function() {
+                $(".monav_black").fadeOut(300);
+            });
+
+
+
+            });
+    </script>
+
+</head>
+<body>
+    <!--헤더-->
+    <header id="header">
+        <div class="header-top pc-on">
+            <div class="header-language">
+                <ul>
+                    <li><a href="javascript:void(0)">ENGLISH</a></li>
+                    <li><a href="javascript:void(0)">中國語</a></li>
+                    <li><a href="javascript:void(0)">日本語</a></li>
+                    <li><a href="javascript:void(0)">한국어</a></li>
+                </ul>
+            </div>
+            <div class="header-login">
+                <ul>
+                    <li><a href="cycle_login.html">로그인</a></li>
+                    <li><a href="javascript:void(0)">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <h1><img src="../assets/img/cycle-logo.png" alt="서울자전거 따릉이 로고"></h1>
+            <nav class="nav ">
+                <ul class="nav_pc">
+                    <li><a href="cycle_inquiry.html">대여소 조회</a></li>
+                    <li><a href="cycle_ticket.html">이용권 구매</a></li>
+                    <li><a href="cycle_notice.html">공지사항</a></li>
+                    <li><a href="cycle_qna.html">문의하기</a></li>
+                </ul>
+                <a class="sitemap btnMenu_m"></a>
+                <div class="monav_black">
+                    <div class="monav_warp" >
+                        <a class="close_m btnclose_m"></a>
+                        <ul class="mo-login">
+                            <li><a href="cycle_login.html" style="font-weight: 700;">로그인</a></li>
+                            <li><a href="" style="color:#747474;">회원가입</a></li>
+                        </ul>
+                        <ul class="mo-nav">
+                            <li><a href="cycle_inquiry.html">대여소 조회</a></li>
+                            <li><a href="cycle_ticket.html">이용권 구매</a></li>
+                            <li><a href="cycle_notice.html">공지사항</a></li>
+                            <li><a href="cycle_qna.html">문의하기</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </nav>
+        </div>
+    </header>
+    <!--컨데이너-->
+    <div class="cycle-maincontainer" >
+        <h2 class="container_h">공지사항</h2>
+        <div class="wid1400-con mb100">
+            <!--검색-->
+            <div class="qna_srhbox">
+                <form action="">
+                    <input type="text" id="qna-srh" class="qna-srh" placeholder="검색어를 입력해 주세요.">
+                    <button type="button" class="qna-btn"></button>
+                </form>
+            </div>
+            <!--카테고리 분류-->
+            <div class="notice_category">
+                <h3>구분</h3>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="ch-notice" name="ch-notice" class="cate-chk" checked="checked">
+                        <label for="ch-notice" class="keep_text">공지</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ch-wrnotice" name="ch-wrnotice" class="cate-chk" checked="checked">
+                        <label for="ch-wrnotice" class="keep_text">긴급공지</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ch-update" name="ch-update" class="cate-chk" checked="checked">
+                        <label for="ch-update" class="keep_text">업데이트</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ch-val" name="ch-val" class="cate-chk" checked="checked">
+                        <label for="ch-val" class="keep_text">기타</label>
+                    </li>
+                </ul>
+                <button type="button">적용</button>
+            </div>
+            <!--테이블-->
+            <div class="board_box">
+                <table class="board-table">
+                    <colgroup>
+                        <col width="12%">
+                        <col width="90%">
+                        <col width="20%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+							<td class="table_tag"><span class="update-tag">업데이트</span></td>
+                            <td class="table_title"><a href="">안드로이드 베타버전 등록안내</a>  </td>
+                            <td class="table_day">2022.05.10</td>
+						</tr>
+                        <tr>
+							<td class="table_tag"><span class="notice-tag">공지</span></td>
+                            <td class="table_title"><a href="">단체권 사용시 주의사항 안내</a> </td>
+                            <td class="table_day">2022.04.08</td>
+						</tr>
+                        <tr>
+							<td class="table_tag"><span class="notice-tag">공지</span></td>
+                            <td class="table_title"><a href="">「교통사망사고 줄이기」따릉이 안전수칙 안내</a> </td>
+                            <td class="table_day">2021.08.11</td>
+						</tr>
+                        <tr>
+							<td class="table_tag"><span class="notice-tag">공지</span></td>
+                            <td class="table_title"><a href="">자전거 보험 안내</a> </td>
+                            <td class="table_day">2022.03.25</td>
+						</tr>
+                        <tr>
+							<td class="table_tag"><span class="show-tag">안내</span></td>
+                            <td class="table_title"><a href="">임시잠금 해제가 안 될 경우</a> </td>
+                            <td class="table_day">2022.03.25</td>
+						</tr>
+                        <tr>
+							<td class="table_tag"><span class="val-tag">기타</span></td>
+                            <td class="table_title"><a href=""> [ ios 안내] 결제시 세션만료 조치안내</a></td>
+                            <td class="table_day">2022.03.25</td>
+						</tr>
+                        <tr>
+							<td class="table_tag"><span class="val-tag">기타</span></td>
+                            <td class="table_title"><a href="">[안드로이드 안내] 결제시 세션만료 조치안내</a> </td>
+                            <td class="table_day">2022.03.25</td>
+						</tr>
+                        <tr>
+							<td class="table_tag"><span class="notice-tag">공지</span></td>
+                            <td class="table_title"><a href="">따릉이를 이용한 배달 대행 등 영리행위 금지</a> </td>
+                            <td class="table_day">2022.03.25</td>
+						</tr>
+                        <tr>
+							<td class="table_tag"><span class="notice-tag">공지</span></td>
+                            <td class="table_title"><a href="">반납 시 미잠금은 추가요금 부과</a> </td>
+                            <td class="table_day">2022.05.10</td>
+						</tr>
+                        <tr>
+							<td class="table_tag"><span class="warning-tag">긴급공지</span></td>
+                            <td class="table_title"><a href="">4481. 올림픽공원 북2문 2 대여소 임시 폐쇄 안내</a> </td>
+                            <td class="table_day">2022.05.10</td>
+						</tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--네비게이션-->
+            <ul class="navigation">
+                <li><a href="javascript:void(0)" class="active">1</a></li>
+                <li><a href="javascript:void(0)">2</a></li>
+                <li><a href="javascript:void(0)">3</a></li>
+                <li><a href="javascript:void(0)">4</a></li>
+                <li><a href="javascript:void(0)">5</a></li>
+                <li><a href="javascript:void(0)">6</a></li>
+                <li><a href="javascript:void(0)">7</a></li>
+                <li><a href="javascript:void(0)">8</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <!--푸터-->
+    <footer class="footer">
+        <div class="footer-warp">
+            <div class="foot-top">
+                <ul class="foot-left">
+                    <li><a href="javascript:void(0)">이용약관</a></li>
+                    <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+                    <li><a href="javascript:void(0)">보험안내</a></li>
+                    <li><a href="javascript:void(0)">도움주신 분</a></li>
+                </ul>
+                <ul class="foot-right">
+                    <li class="foot-ico insta"><a href="javascript:void(0)"></a></li>
+                    <li class="foot-ico face"><a href="javascript:void(0)"></a></li>
+                    <li class="foot-ico blog"><a href="javascript:void(0)"></a></li>
+                </ul>
+            </div>
+            <div class="foot-bottom">
+                    <ul>
+                        <li>서울특별시 중구 세종대로 110 서울특별시  </li>
+                        <li>대표자 오세훈</li>
+                        <li>Tel : 1599-0120</li>
+                    </ul>
+                    <ul>
+                        <li>사업자등록번호 : 104-83-00469</li>
+                        <li>우편번호 04524</li>
+                    </ul>
+                    <p>COPYRIGHT ⓒ 2018 bikeseoul All RIGHTS RESERVED.</p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>

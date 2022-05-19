@@ -1,0 +1,488 @@
+/* PARALLAX */
+/*$baseurl: 'http://www.firewatchgame.com/';*/
+
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 300;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+   }
+   @font-face {
+    font-family: 'S-CoreDream-7ExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.body {
+  margin: -5px;
+}
+/*페럴렉스 스타일*/
+.keyart, .keyart_layer {
+	height: 1200px;
+}
+
+#parallax {
+	display: block;
+}
+
+.keyart {
+	position: relative;
+	z-index: 10;
+}
+
+.keyart_layer {
+	background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+	width: 100%;
+	position: absolute;
+}
+.keyart_layer.parallax {
+	position: fixed;
+}
+#keyart-0 {
+    background-image: url('../img/parallax01.png');
+    background-color: #f7afc7;
+}
+#keyart-1 {
+    background-image: url('../img/parallax01.png');
+}
+#keyart-2 {
+    background-image: url('../img/parallax02.png');
+}
+#keyart-3 {
+    background-image: url('../img/parallax03.png');
+}
+#keyart-4 {
+    background-image: url('../img/parallax04.png');
+}
+#keyart-5 {
+    background-image: url('../img/parallax05.png');
+}
+#keyart-6 {
+    background-image: url('../img/parallax06.png');
+}
+#keyart-7 {
+    background-image: url('../img/parallax07.png');
+}
+#keyart-8 {
+    background-image: url('../img/parallax8.png');
+}
+#keyart-scrim {
+    background-color: #f7afc7;
+    opacity: 0;
+}
+
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ 
+        #keyart-0 {
+         background-image: url('../img/parallax00.png');
+         background-color: #f7afc7;
+     }
+     #keyart-1 {
+         background-image: url('../img/parallax01.png');
+     }
+     #keyart-2 {
+         background-image: url('../img/parallax02.png');
+     }
+     #keyart-3 {
+         background-image: url('../img/parallax03.png');
+     }
+     #keyart-4 {
+         background-image: url('../img/parallax04.png');
+     }
+     #keyart-5 {
+         background-image: url('../img/parallax05.png');
+     }
+     #keyart-6 {
+         background-image: url('../img/parallax06.png');
+     }
+     #keyart-7 {
+         background-image: url('../img/parallax07.png');
+     }
+     #keyart-8 {
+         background-image: url('../img/parallax8.png');
+     }
+ }
+
+
+#maincontain{
+    padding-top:50px;
+    background-color: #f7afc7;
+    position: relative;
+    z-index: 98;
+    display: block;
+    /* height: 1200px; */
+}
+
+#nonparallax{
+    display: block;
+    background-image: url(../img/evian-mobile.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+@media(max-width: 1230px){
+    .circle:after{
+        width: 90%!important;
+    height: 46vh!important;
+    }
+}
+@media(max-width: 600px){
+    #parallax{
+        display: none;
+    }
+    .position1{
+        right:12%!important;
+    }
+    .position3{
+        right:12%!important;
+    }
+    .circle{
+        height:auto!important;
+    }
+    .circle:after{
+        width: 90%!important;
+        height: 90%!important;
+        border-radius: 300px 300px!important;
+    }
+}
+
+@media(min-width: 601px){
+    #nonparallax{
+        display: none;
+    }
+    
+}
+
+/*라인 svg*/
+.line-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+svg {
+    display: inline-block;
+    height: 48%;
+}
+
+.cls-1{
+    fill:none;
+    stroke:#55b3e6;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:2px;
+}
+/*에비앙 배경이미지*/
+.evian-top{
+    display: block;
+    width: 100%;
+    height: 1000px;
+    background-image: url(../img/evian_top.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+.evian-bg{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color: #f7afc7;
+}
+.evian-middle{
+    display: block;
+    width: 100%;
+    height: 800px;
+    background-image: url(../img/evian_middle.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+.evian-bottom{
+    display: block;
+    width: 100%;
+    height: 600px;
+    background-image: url(../img/evian_bottom.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+/*중간 텍스트 박스*/
+.text-h4{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 14px;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 700;
+}
+.h4-circle1:before{
+    content: "";
+    position: absolute;
+    top: -54%;
+    right: -16%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50% 50%;
+    border:1px solid #fff;
+}
+.h4-circle1:after{
+    content: "";
+    position: absolute;
+    top: -15%;
+    right: -5%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50% 50%;
+    background-color: #f73166;
+}
+.h4-circle2:before{
+    content: "";
+    position: absolute;
+    top: -54%;
+    left: -29%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50% 50%;
+    border:1px solid #fff;
+}
+.h4-circle2:after{
+    content: "";
+    position: absolute;
+    top: -15%;
+    left: -14%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50% 50%;
+    background-color: #f73166;
+}
+.h4-circle3:before{
+    content: "";
+    position: absolute;
+    top: -59%;
+    right: -27%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50% 50%;
+    border:1px solid #fff;
+}
+.h4-circle3:after{
+    content: "";
+    position: absolute;
+    top: -15%;
+    right: -12%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50% 50%;
+    background-color: #f73166;
+}
+.text-box{
+    position: relative;
+    top: -10px;
+    text-align: center;
+    opacity: 0;
+    display: inline-block;
+    color:#f73166;
+    padding: 40px 48px;
+    border-radius: 14px;
+    background-color: rgb(255,255,255, 15%);
+    border: 1px solid #fff;
+    box-shadow: 10px 10px 40px 1px rgb(228 4 74 / 10%);
+}
+.text-box2{
+    position: relative;
+    top: -300px;
+    left: 10%;
+    text-align: center;
+    opacity: 0;
+    display: inline-block;
+    color:#f73166;
+    padding: 40px 48px;
+    border-radius: 14px;
+    background-color: rgb(255,255,255, 15%);
+    border: 1px solid #fff;
+    box-shadow: 10px 10px 40px 1px rgb(228 4 74 / 10%);
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.Mention{
+    position: absolute;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+}
+.position1{
+    top: 5%;
+    right: 20%;
+}
+.position3{
+    top: 20%;
+    right: 16%;
+}
+.fade-box{
+    position: relative;
+    top: -10px;
+    text-align: center;
+    opacity: 0;
+
+}
+/*에비앙 하단 텍스트*/
+.evian-mockup{
+    display: block;
+    width: 100%;
+    height: 760px;
+    background-image: url(../img/evian.png);
+    background-position: 55% 50%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+.circle{
+    z-index: -1;
+    position: relative;
+    margin: 0 auto;
+    width:100%;
+    height: 290px;
+    text-align: center;
+}
+.circle:after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: -4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: 1200px;
+    height: 600px;
+    border-radius: 800px 800px 0 0;
+    background-color: #fbe2ef;
+}
+.text-h2{
+    text-align: center;
+    position: relative;
+    font-size: 44px;
+    line-height: 48px;
+    font-family: 'S-CoreDream-7ExtraBold';
+    color:#f73166;
+}
+.sub-text{
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    padding: 0 36px;
+    text-align: center;
+    font-family: 'NotoSans-Bold';
+    color:#f73166;
+    font-size: 18px;
+    line-height: 34px;
+
+}
+.fade{
+    opacity: 0;
+}
+
+@media (max-width: 400px) {
+    #nonparallax{
+        background-position:top;
+        background-size:cover;
+        background-color: #f7afc7;
+    }
+    .keyart, .keyart_layer {
+        height: 600px;
+    }
+    svg{
+        display: none;
+    }
+    .evian-top{
+        background-image: url(../img/evian-mobile2.jpg);
+        height: 600px;
+    }
+    .evian-middle{
+        background-image: url(../img/evian-mobile3.jpg);
+        height: 600px;
+        opacity: 1;
+        background-size: cover;
+    }
+    .evian-bottom{
+        height: 10px;
+    }
+    .evian-bg{
+        height:50px;
+    }
+    .evian-mockup{
+        height: 400px;
+        
+    }
+    .Mention{
+        font-size:14px;
+        line-height: 20px;
+    }
+    .text-box{
+        padding:16px 20px;
+        word-break: keep-all;
+        background-color:rgb(255,255,255, 80%);
+    }
+    .text-box br{
+        display: none;
+    }
+    .text-box2{
+        padding:16px 20px;
+        word-break: keep-all;
+        background-color:rgb(255,255,255, 80%);
+    }
+    .text-box2 br{
+        display: none;
+    }
+    .circle{
+        height: 460px;
+    }
+    .circle:after{
+        width: 90%;
+        height: 340px;
+        border-radius: 300px 300px;
+    }
+    .text-h2{
+        font-size: 36px;
+        word-break: keep-all;
+    }
+    .sub-text{
+        font-size: 16px;
+        line-height: 32px;
+        word-break: keep-all;
+    }
+    .sub-text br{
+        display: none;
+    }
+}

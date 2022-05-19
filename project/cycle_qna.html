@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울자전거 따릉이 - 무인대여시스템</title>
+    <meta name="title" content="서울자전거 따릉이 - 무인대여시스템">
+    <meta name="keywords" content=" 저탄소 자전거, 자전거, 서울 자전거, 따릉이, 서울 따릉이">
+    <meta name="description" content="누구나 쉽고 편리하게 이용할 수 있는 저탄소 이동수단 서울자전거 따릉이">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/samsung.ico">
+    <!--common-->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/cycle_common.css">
+    <link rel="stylesheet" href="../assets/css/cycle_qna.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--swiper-->
+    <link rel="stylesheet" href="../assets/css/swiper.min.css"/>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('.btnMenu_m').click(function() {
+                $(".monav_black").fadeIn(300);
+            });
+            
+            $('.btnclose_m').click(function() {
+                $(".monav_black").fadeOut(300);
+            });
+
+            //질문 타이틀 박스 클릭이벤트
+            $('.qna-subbox>li').click(function() {
+                $('.qna-subbox>li').removeClass('active');
+                $(this).addClass('active');
+
+                var num_ = $(this).index()
+                //console.log(num_);
+                if(num_ == 0){
+                    $('.ask-container').hide();
+                    $('.faq-container').show();
+                }
+                if(num_ == 1){
+                    $('.faq-container').hide();
+                    $('.ask-container').show();
+                }
+            });
+
+            //qna 토글
+            var flag = true;
+            $(".faq-head").click(function(){
+                if(flag){
+                    $(this).siblings(".faq-txt").addClass('active');
+                    
+                    flag = false;
+                }else{
+                    $(this).siblings(".faq-txt").removeClass('active');
+                    
+                    flag = true;
+                }
+                    
+            });
+
+            //자주하는 질문 sub메뉴 클릭탭
+            $(".faq-subnav>li").click(function(){
+                var li_ = $(this).index()
+
+                if(li_ == 0){
+                    $('.faq__').hide();
+                    $('.faq_1').show();
+                }
+                if(li_ == 1){
+                    $('.faq__').hide();
+                    $('.faq_2').show();
+                }
+                if(li_ == 2){
+                    $('.faq__').hide();
+                    $('.faq_3').show();
+                }
+                if(li_ == 3){
+                    $('.faq__').hide();
+                    $('.faq_4').show();
+                }
+                if(li_ == 4){
+                    $('.faq__').hide();
+                    $('.faq_5').show();
+                }
+                if(li_ == 5){
+                    $('.faq__').hide();
+                    $('.faq_6').show();
+                }
+                if(li_ == 6){
+                    $('.faq__').hide();
+                    $('.faq_7').show();
+                }
+                if(li_ == 7){
+                    $('.faq__').hide();
+                    $('.faq_8').show();
+                }
+                if(li_ == 8){
+                    $('.faq__').hide();
+                    $('.faq_9').show();
+                }
+                if(li_ == 9){
+                    $('.faq__').hide();
+                    $('.faq_10').show();
+                }
+                if(li_ == 10){
+                    $('.faq__').hide();
+                    $('.faq_11').show();
+                }
+            });
+
+            });
+    </script>
+
+</head>
+<body>
+    <!--헤더-->
+    <header id="header">
+        <div class="header-top pc-on">
+            <div class="header-language">
+                <ul>
+                    <li><a href="javascript:void(0)">ENGLISH</a></li>
+                    <li><a href="javascript:void(0)">中國語</a></li>
+                    <li><a href="javascript:void(0)">日本語</a></li>
+                    <li><a href="javascript:void(0)">한국어</a></li>
+                </ul>
+            </div>
+            <div class="header-login">
+                <ul>
+                    <li><a href="cycle_login.html">로그인</a></li>
+                    <li><a href="javascript:void(0)">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <h1><img src="../assets/img/cycle-logo.png" alt="서울자전거 따릉이 로고"></h1>
+            <nav class="nav ">
+                <ul class="nav_pc">
+                    <li><a href="cycle_inquiry.html">대여소 조회</a></li>
+                    <li><a href="cycle_ticket.html">이용권 구매</a></li>
+                    <li><a href="cycle_notice.html">공지사항</a></li>
+                    <li><a href="cycle_qna.html">문의하기</a></li>
+                </ul>
+                <a class="sitemap btnMenu_m"></a>
+                <div class="monav_black">
+                    <div class="monav_warp" >
+                        <a class="close_m btnclose_m"></a>
+                        <ul class="mo-login">
+                            <li><a href="cycle_login.html" style="font-weight: 700;">로그인</a></li>
+                            <li><a href="" style="color:#747474;">회원가입</a></li>
+                        </ul>
+                        <ul class="mo-nav">
+                            <li><a href="cycle_inquiry.html">대여소 조회</a></li>
+                            <li><a href="cycle_ticket.html">이용권 구매</a></li>
+                            <li><a href="cycle_notice.html">공지사항</a></li>
+                            <li><a href="cycle_qna.html">문의하기</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </nav>
+        </div>
+    </header>
+    <!--컨데이너-->
+    <div class="cycle-maincontainer" >
+        <h2 class="container_h">문의하기</h2>
+        <div class="wid1400-con mb100">
+            <ul class="qna-subbox">
+                <li class="active" style="border-radius: 20px 0px 0px 0px;">
+                    <a href="javascript:void(0)">
+                        <h3 class="qna_white">자주하는 질문</h3>
+                        <p class="qna_white">자주하는질문을 이용하시면 보다 빠르게 답변을 얻으실 수 있습니다.</p>
+                    </a>
+                </li>
+                <li style=" border-radius: 0px 20px 0px 0px;">
+                    <a href="javascript:void(0)">
+                        <h3>문의하기</h3>
+                        <p>궁금한 점이 있으세요? 분야별 담당자들이 도와드리겠습니다.</p>
+                    </a>
+                </li>
+            </ul>
+            <div class="qna_srhbox">
+                <form action="">
+                    <input type="text" id="qna-srh" class="qna-srh" placeholder="검색어를 입력해 주세요.">
+                    <button type="button" class="qna-btn"></button>
+                </form>
+            </div>
+            <!--1. 자주하는 질문 몸통-->
+            <div class="faq-container">
+                <!--왼쪽 서브 네브-->
+                <div class="faq-subnav-box">
+                    <ul class="faq-subnav">
+                        <li class="active">질문 TOP</li>
+                        <li>이용안내</li>
+                        <li>대여/반납</li>
+                        <li>앱/홈페이지</li>
+                        <li>결제/환불/마일리지</li>
+                        <li>대여소(개설/폐쇄)</li>
+                        <li>회원정보, 로그인</li>
+                        <li>자전거/시설 관리</li>
+                        <li>운영 및 정책</li>
+                        <li>자전거 추가배치</li>
+                        <li>기타</li>
+                    </ul>
+                </div>
+                <!--오른쪽 몸통-->
+                <div class="faq-right">
+                    <!--질문 TOP-->
+                    <div class="faq__ faq_1">
+                        <ul class="faq-one">
+                            <li class="faq-head">따릉이를 이용하고 싶은데 어떻게 해야 하나요?(구매/대여/반납)</li>
+                            <li class="faq-txt">
+                                자전거는 회원 및 비회원으로 모두 이용이 가능합니다. 다만, 비회원은<br>
+                                일일권만 구매 가능합니다. <br>
+                                <br>
+                                1. 회원으로 이용하는 방법<br>
+                                ‣ 회원가입->이용권구매->자전거대여,반납<br>
+                                <br>
+                                2. 비회원으로 이용하는 방법<br>
+                                ‣ (비회원)이용권구매->자전거대여,반납 순으로 이용가능합니다.<br>
+                                ※ 따릉이 앱 상단에 “비회원” 선택 >인증 후 일일권 구매 가능합니다.<br>
+                                <br>
+                                3. QR자전거 대여,반납방법<br>
+                                https://www.youtube.com/watch?v=2i2FpMWQBnU<br>
+                                https://www.youtube.com/watch?v=qV8lem9vy8U
+                            </li>
+                        </ul>
+                        <ul class="faq-one">
+                            <li class="faq-head">정기권 및 이용권 이용방법 (이용권은 한번만 이용 가능한가요?)</li>
+                            <li class="faq-txt">
+                                환승카드<br>
+                                등록방법(마일리지 적립용/365일권만 마일리지 적립됨)<br>
+                                <br>
+                                ◆ 티머니, 후불교통카드<br>
+                                - 홈페이지 / 스마트폰앱에 로그인 -> 우측상단 내정보>환승마일리지><br>
+                                <br>
+                                우측상단 카드모양>등록 및 변경>카드종류 선택>카드번호 16자리 입력 저장<br>
+                                <br>
+                                (주의 : 현재 KBANK, 신한 아멕스카드(15자리) 카드, 지하철 정기권,<br>
+                                        모바일 페이 의 경우 적립이 불가하오니, 해당 카드 이외의<br>
+                                        카드 사용을 부탁드립니다.)
+                            </li>
+                        </ul>
+                        <ul class="faq-one">
+                            <li class="faq-head">외국인의 따릉이 이용 방법은?</li>
+                            <li class="faq-txt">
+                                ○ 따릉이는 외국인 관광객을 위한 전용 요금제를 운영하고 있으며, 서울 공공자전거<br>
+                                홈페이지(영어,중국어,일본어)에서 언어 선택 후 외국인 이용권을 구매<br>
+                                할 수 있습니다. 홈페이지에서 별도 인증 없이 언어선택만으로 영어, 중국어, 일어<br>
+                                    가 지원되며, 자전거 단말기에도 가입한 외국어로 음성안내가 이루어집니다.<br>
+                                    다만, 이용권 결제는 해외에서 발급된 신용카드로 하셔야 하며 1개의 카드로 1장<br>
+                                    의 이용권 구매만 가능합니다.(혹은 외국인 관광객을 대상으로 판매되는<br>
+                                    Dsicover Pass로도 이용가능)
+                            </li>
+                        </ul>
+                        <ul class="faq-one">
+                            <li class="faq-head">따릉이 시설물 현황을 알고 싶습니다.</li>
+                            <li class="faq-txt">
+                                2021년 12월 31일 기준<br>
+                                자전거 40,500대/대여소 2,600개소/지역센터 11개소를 운영하고 있습니다.<br>
+                                상세한 현황은 서울시설공단 홈페이지<br>
+                                www.sisul.or.kr<br>
+                                > 정보공개> 업무정보공개> 부서별 업무현황에서, 공공자전거를 검색하시면 됩니다.<br>
+                            </li>
+                        </ul>
+                        <ul class="faq-one">
+                            <li class="faq-head">임시잠금 해제가 안되요.</li>
+                            <li class="faq-txt">
+                                안녕하세요. 따릉이입니다.<br>
+                                임시 잠금 해제가 안 풀리는 경우, 대부분 앱 설정 및 핸드폰 내의 프로그램에서 오류가 발생되는 경우가 대부분입니다.<br>
+                                아래 사항을 확인 후 재 실행 부탁드립니다. <br>
+                                1. 위치정보, 블루투스 활성화 여부 확인 <br>
+                                <br>
+                                2. 앱 종료 후, 로그인하여 앱 잠금 해제 <br>
+                                <br>
+                                3. 핸드폰 종료 후, 앱 재 실행하여, 임시 잠금 해제 감사합니다.
+                            </li>
+                        </ul>
+                        <ul class="faq-one">
+                            <li class="faq-head">대여하기 버튼을 눌렀으나, 대여 신청이 안되요.</li>
+                            <li class="faq-txt">
+                                ※ 최초 대여신청을 했을때의 안내입니다. <br>
+                                계속 QR자전거가 대여되었는데, 특정자전거가 안될 경우 고장신고 부탁드립니다. <br>
+                                <br>
+                                1. 앱의 경우, 현재 최신 버젼인지 먼저 확인을 합니다. <br> 
+                                <br>
+                                2. 앱 위치정보, 블루투스 관련 설정정보를 확인합니다. <br>
+                                위치, 블루투스가 켜져 있는지 확인합니다.<br>
+                                <br>
+                                3. 앱 > 애필리케이션 > 따릉이 > 권한에서 <br>
+                                위치 , 카메라, 저장공간이 활성화 되어 있는지 확인합니다.<br>
+                                <br>
+                                4. 연결되어 있는 블루투스 기기(스마트와치, 밴드, 이어폰 등)를 종료하고, 대여시도를 해봅니다.  <br>
+                                <br>
+                                5. 앱 내 실행되어 있는 앱(금융권, 카드사,증권사 등)을 종료하고 대여시도를 해봅니다.  <br>
+                                <br>
+                                6. 절전모드 또는 V3 internet Security 에서 절전모드가 되어 있는지 확인합니다.<br>
+                                <br>
+                                7. 설정 -> 일반 -> 초기화 -> 네트워크 재설정을 이용하여, 블루투스 연결 초기화를 부탁드립니다.<br>
+                                <br>
+                                8. 핸드폰을 종료하고 3~5초 정도 후, 다시 실행하여 자전거 대여시도를 해봅니다. <br>
+                                <br>
+                                9. 모두 해봤는데도 안 된다면, 시민의견 수렴에 부탁드립니다. 
+                            </li>
+                        </ul>
+                    </div>
+                    <!--이용안내-->
+                    <div class="faq__ faq_2">
+                        <ul class="faq-one">
+                            <li class="faq-head">외국인의 따릉이 이용 방법은?</li>
+                            <li class="faq-txt">
+                                ○ 따릉이는 외국인 관광객을 위한 전용 요금제를 운영하고 있으며, 서울 공공자전거<br>
+                                홈페이지(영어,중국어,일본어)에서 언어 선택 후 외국인 이용권을 구매<br>
+                                할 수 있습니다. 홈페이지에서 별도 인증 없이 언어선택만으로 영어, 중국어, 일어<br>
+                                    가 지원되며, 자전거 단말기에도 가입한 외국어로 음성안내가 이루어집니다.<br>
+                                    다만, 이용권 결제는 해외에서 발급된 신용카드로 하셔야 하며 1개의 카드로 1장<br>
+                                    의 이용권 구매만 가능합니다.(혹은 외국인 관광객을 대상으로 판매되는<br>
+                                    Dsicover Pass로도 이용가능)
+                            </li>
+                        </ul>
+                        <ul class="faq-one">
+                            <li class="faq-head">따릉이 시설물 현황을 알고 싶습니다.</li>
+                            <li class="faq-txt">
+                                2021년 12월 31일 기준<br>
+                                자전거 40,500대/대여소 2,600개소/지역센터 11개소를 운영하고 있습니다.<br>
+                                상세한 현황은 서울시설공단 홈페이지<br>
+                                www.sisul.or.kr<br>
+                                > 정보공개> 업무정보공개> 부서별 업무현황에서, 공공자전거를 검색하시면 됩니다.<br>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--대여/반납-->
+                    <div class="faq__ faq_3">
+                        <ul class="faq-one">
+                            <li class="faq-head">대여나 반납은 24시간 가능한가요?</li>
+                            <li class="faq-txt">
+                                ○ 따릉이 대여소는 24시간 동안 운영합니다. <br>
+                                다만,  관련시스템의 보수,점검,장애, 대여소(임시)폐쇄, 기상상태 악화 등 비정상적인 상황, 또는 이러한 상황에 대비(복구)하기 위해 서비스 제공이 불가능한 경우 서비스 제공이 일시적으로 중단될 수 있습니다.<br>
+                                대여와 반납이 원할하지 않을 경우에 안내센터(1599-0120)으로 문의주시기 바랍니다. <br>
+                                ○ 콜센터 근무시간은 00:00 ~ 24:00까지입니다.<br>
+                            </li>
+                        </ul>
+                        <ul class="faq-one">
+                            <li class="faq-head">단체대여는 어떻게 하나요?</li>
+                            <li class="faq-txt">
+                                ○ 단체권 구매<br>
+                                - 단체권 구매는 로그인> '이용권 구매'>'단체권 구매'를 합니다.<br>
+                                (기존 이용권의 유효기간이 남아있어도 단체권 구매는 가능합니다.)<br>
+                                - 단체권은 구매할 때의 인원수 (최소 2명에서 최대 5명까지 가능)에<br>
+                                해당하는 만큼 대여할수 있습니다.<br>
+                                <br>
+                                ○ 단체권 사용법<br>
+                                1. 로그인을 하고 대여소를 선택합니다.<br>
+                                2. 이용권의 개수만큼 하단 대여하기 선택 후, QR코드를 순차적으로 스캔합니다.<br>
+                                3. 잠금장치가 해제되면 이용합니다.<br>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--앱/홈페이지-->
+                    <div class="faq__ faq_4">
+                        <ul class="faq-one">
+                            <li class="faq-head">앱 속도가 느려요</li>
+                            <li class="faq-txt">
+                                안녕하세요. 따릉이입니다.<br>
+                                우선 불편을 끼쳐드려서 죄송합니다.<br>
+                                현재 앱 로딩 개선 관련 리뉴얼을 준비/진행중에 있습니다.<br>
+                                또한 지도의 gps 찾는 부분에서도 잘 못 찾을 경우,<br>
+                                지연되는 점 안내드립니다.<br>
+                                <br>
+                                첫번째로 팝업의 경우 지연사항이 존재하는 바,<br>
+                                하단 스크롤을 해주시면, 1주일동안 다시 보지 않기를 선택 부탁드립니다.<br>
+                                <br>
+                                두번째로 오른쪽 세번째 버튼(지도, 별 아이콘) 을 눌러주시면<br>
+                                즐겨찾기 화면으로 설정을 하실 수 있습니다.<br>
+                                이경우 앱 실행시 텍스트만 받아오고, 지도의 gps 미확인으로 인해<br>
+                                보다 빠르게 열릴수 있는 점 안내드립니다.<br>
+                                <br>
+                                더불어 빠른 앱 실행을 위해, 앱 개선에도 더욱 노력을 하도록 하겠습니다.<br>
+                                더 문의사항이 있으실 경우 시민의견수렴에 남겨주시고<br>
+                                기종, os 정보등을 남겨주시면 문제확인에 더욱 도움이 되겠습니다.<br>
+                                <br>
+                                감사합니다.<br>
+                            </li>
+                        </ul>
+                        <ul class="faq-one">
+                            <li class="faq-head">대여하기 버튼을 눌렀으나, 계쏙 대여중으로 뜹니다.</li>
+                            <li class="faq-txt">
+                                일반적으로 QR 촬영을 할 경우, 다른 사람의 대여를 방지하기 위해<br>
+                                1분정도의 대여신청 시간이 주어집니다.<br>
+                                이때, 자전거 QR을 촬영할경우 대여중 안내멘트가 나옵니다.<br>
+                                블루투스 연결이 실패 후, 재촬영을 위해서는 대여신청 취소를<br>
+                                눌러줘야 하며<br>
+                                위치는 <br>
+                                - 즐겨찾기 화면의 경우 대여소를 선택 후, LCD 자전거 목록 위 부분에<br>
+                                현재 대여한 자전거 목록이 나옵니다. 여기서 신청취소를 눌러주면<br>
+                                대여신청 취소가 됩니다.<br>
+                                - 지도화면의 경우, 지도에서 대여소를 누를 경우 <br>
+                                LCD 자전거 목록 위 부분에<br>
+                                현재 대여한 자전거 목록이 나옵니다. 여기서 신청취소를 눌러주면<br>
+                                대여신청 취소가 됩니다.<br>
+                                <br>
+                                ※ 다만 블루투스의 연결이 실패하여도, 단말기 통신 후 다시 연결되는<br>
+                                경우도 있어서 잠시만 기다려주셔도 연결이 될 수 있는 점 안내드립니다.<br>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--결제/환불/마일리지-->
+                    <div class="faq__ faq_5">
+                        <ul class="faq-one">
+                            <li class="faq-head">이용구너 만료 전 정기결제가 되나요?</li>
+                            <li class="faq-txt">
+                                ○  이용권 정기결제 기능은 지원되고있지 않습니다.<br>
+                                <br>
+                                ○ “ 정기결제 ” 는 기본 대여시간을 초과하여 이용시 발생되는 추과과금의 자동결제를 위하여 전자결제업체인 엘지 유플러스에서 사전 승인을 받는다는 의미로 사용되고 있습니다 .<br>  
+                                이에 대한 공공자전거 별도의 문구를 만들 수 없어 정기결제 메시지로 대신 표출되는 부분을 양해 부탁드립니다 .<br>
+                            </li>
+                        </ul>
+                        <ul class="faq-one">
+                            <li class="faq-head">환불신청 방법, 환불규정, 입금 처리는 언제 되나요?</li>
+                            <li class="faq-txt">
+                                ○ 환불 신청 방법 : 앱> 나의공간> 결제관리> 결제내역 화면  환불/취소 항목에서<br>
+                                <br>
+                                환불 글씨를 눌러 환불계좌,은행명, 예금주명 등을 입력하여 진행하시면 됩니다.<br>
+                                <br>
+                                ○ 환불규정 : 앱 중앙하단  이용안내><br>
+                                ※ 이용권 사용안내/환불 규정 보기<br>
+                                <br>
+                                ○<br>
+                                ※ 이용권 사용한 경우(이용권 개시일 기준)<br>
+                                1일권 : 환불불가 , 7일권 : 2일이내, 30일권 : 7일이내, 180일권 : 60일이내,<br>
+                                365일권은 150일이내 신청해야만 환불이 가능합니다.<br>
+                                <br>
+                                ○ 이용개시일로부터 환불 접수일자가 오래 경과 될수록 환불액은 줄어들며, <br>
+                                    없을 수도 있습니다.<br>
+                                    <br>
+                                ○  입금은 환불신청하신 날짜 기준으로  2주 ~3주가량 소요 될 수 있으나 사정에 따라<br>
+                                    늦어질 수 도 있는 점 양해 부탁드립니다.<br>
+                                    <br>
+                                ○ 환불 진행이 잘 안되시면 콜센터 1599-0120으로 문의 부탁 드립니다.<br>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--대여소(개설/폐쇄)-->
+                    <div class="faq__ faq_6">
+                        <ul class="faq-one">
+                            <li class="faq-head">대여소 개설, 폐쇄, 이설 관련 문의입니다.</li>
+                            <li class="faq-txt">
+                                대여소의 신규개설, 폐쇄, 이설 등은 주민간 찬반이 갈리는 사안으로 해당<br>
+                                자치구 교통행정과를 통해 신청해 주시면 감사하겠습니다.<br>
+                                <br>
+                                -자치구별 공공자전거 업무처리부서 안내 -<br>
+                                1. 종로구 교통행정과 (2148-3275)<br>
+                                2. 중구 교통행정과 (3396-6215)<br>
+                                3. 용산구 교통행정과 (2199-7754)<br>
+                                4. 성동구 교통행정과 (2286-5683)<br>
+                                5. 광진구 교통행정과 (450-7924)<br>
+                                6. 동대문구 교통행정과 (2127-4888)<br>
+                                7. 중랑구 교통행정과 (2094-2582)<br>
+                                8. 성북구 교통행정과 (2241-3413)<br>
+                                9. 강북구 교통행정과 (901-5925)<br>
+                                10. 도봉구 교통행정과 (2091-4163)<br>
+                                11. 노원구 교통행정과 (2116-0632)<br>
+                                12. 은평구 교통행정과 (351-7775)<br>
+                                13. 서대문구 교통행정과 (330-1906)<br>
+                                14. 마포구 교통행정과 (3153-9642)<br>
+                                15. 양천구 교통행정과 (2620-3700)<br>
+                                16. 강서구 교통행정과 (2600-4137)<br>
+                                17. 구로구 교통행정과 (860-2686)<br>
+                                18. 금천구 교통행정과 (2627-1722)<br>
+                                19. 영등포구 교통행정과 (2670-3873)<br>
+                                20. 동작구 교통행정과 (820-1642)<br>
+                                21. 관악구 교통행정과 (879-6863)<br>
+                                22. 서초구 교통행정과 (2155-7186)<br>
+                                23. 강남구 교통정책과 (3423-6413)<br>
+                                24. 송파구 교통과 (2147-3147)<br>
+                                25. 강동구 교통행정과 (3425-6262)<br>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--회원정보, 로그인-->
+                    <div class="faq__ faq_7">
+                        <ul class="faq-one">
+                            <li class="faq-head">개인정보 열람 및 삭제 요구 방법</li>
+                            <li class="faq-txt">
+                                ○ 모든 개인정보는 관련 법령에 근거하여 수집, 보유, 처리, 삭제되고 있습니다. 이러한 개인정보는 각 기관에서 개인정보파일로 관리되고 있으며 정보주체가 그 관리 목록을 조회할 수 있습니다.<br>
+                                <br>
+                                - 개인정보파일이란?개인정보를 쉽게 검색할 수 있도록 일정한 규칙에 따라 체계적으로<br>
+                                    배열하거나 구성한 개인정보의 집합물을 말한다. (개인정보보호 제2조 4항)<br>
+                                ○ 정보주체(개인정보보호법 제2조 3항 - 처리되는 정보에 의하여 알아볼 수 있는 사람으로서 그 정보의 주체가 되는 사람)는 법적 근거를 통하여 자신의 개인정보에 대한 열람, 정정, 삭제, 처리정지 청구를 신청할 수 있습니다.<br>
+                                ○ 개인정보 민원신청 절차<br>
+                                ※ 개인정보 열람, 정정·삭제, 처리정지 청구는 개인정보파일을 보관하고 있는 기관을 통해 직접 신청(오프라인)하시거나 행정안전부를 통해서 할 수 있습니다.<br>
+                                자세한 내용 :<br>
+                                https://www.privacy.go.kr/wcp/dcl/per/pernalInfo.do<br>
+
+                                ◆ "개인정보(열람¸ 정정·삭제¸ 처리정지) 요구서" 를 다운받으신후, 직접 신청 가능<br>
+                                (양식다운로드: 따릉이홈페이지->고객센터->공지사항->개인정보 검색)<br>
+
+                                ★ 위의 양식 다운로드하여 내용 작성 후 따릉이 안내센터 FAX(02-2290-7296) 로 보내주<br>
+
+                                시거나 ,  공공자전거(<br>
+                                seoulbike2014@gmail.com)<br>
+                                로 송부해주시면 됩니다.<br>
+
+                                법적근거<br>
+                                1. [개인정보보호법] 제3조(개인정보 보호 원칙)<br>
+                                2. [개인정보보호법] 제4조(정보주체의 권리)<br>
+                                3. [개인정보보호법] 제35조(개인정보의 열람)<br>
+                                4. [개인정보보호법] 제36조(개인정보의 정정·삭제)<br>
+                                5. [개인정보보호법] 제37조(개인정보의 처리정지 등)<br>
+                                6. [개인정보보호법] 제38조(권리행사의 방법 및 절차)<br>
+                            </li>
+                        </ul>
+                        <ul class="faq-one">
+                            <li class="faq-head">정보공개 및 데이터 요청방법</li>
+                            <li class="faq-txt">
+                                ○ 공공자전거 따릉이에 정보공개 및 데이터 요청방법 대한 일반적인 사항은, 현재 서울 열린데이터 광장에서 공공자전거로 검색 시  기본 정보가 검색이 됩니다.<br>
+                                http://data.seoul.go.kr/<br>
+                                보다 상세한 정보공개 요청은<br>
+                                ○ 인터넷 사이트 검색창에  정보공개포털 이라고 검색하시면 관련 홈페이지가 안내됩니다.<br>
+                                <br>
+                                접속 후  > 공개청구>  청구신청>  비회원 로그인 클릭>  비회원 정보입력및 개인정보 동의><br>
+                                <br>
+                                기관찾기(서울특별시/ 서울특별시시설<br>
+                                공단)<br>
+                                >신청정보 입력>청구<br>
+                                <br>
+                                과정을 진행하시어 신청 부탁 드립니다.<br>
+                                <br>
+                                ○ 위 과정을 통하여 신청하시면 개발에 필요하시는 데이터를 전달 드릴수 있습니다.<br>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--자전거/시설 관리-->
+                    <div class="faq__ faq_8">
+                        <ul class="faq-one">
+                            <li class="faq-head">외국인의 따릉이 이용 방법은?</li>
+                            <li class="faq-txt">
+                                ○ 따릉이는 외국인 관광객을 위한 전용 요금제를 운영하고 있으며, 서울 공공자전거<br>
+                                홈페이지(영어,중국어,일본어)에서 언어 선택 후 외국인 이용권을 구매<br>
+                                할 수 있습니다. 홈페이지에서 별도 인증 없이 언어선택만으로 영어, 중국어, 일어<br>
+                                    가 지원되며, 자전거 단말기에도 가입한 외국어로 음성안내가 이루어집니다.<br>
+                                    다만, 이용권 결제는 해외에서 발급된 신용카드로 하셔야 하며 1개의 카드로 1장<br>
+                                    의 이용권 구매만 가능합니다.(혹은 외국인 관광객을 대상으로 판매되는<br>
+                                    Dsicover Pass로도 이용가능)
+                            </li>
+                        </ul>
+                    </div>
+                    <!--운영 및 정책-->
+                    <div class="faq__ faq_9">
+                        <ul class="faq-one">
+                            <li class="faq-head">만 13세~14세 회원의 경우 보험 적용이 되나요?</li>
+                            <li class="faq-txt">
+                                일반적으로 보험 적용은 되지만, 상법 제732조에 의거하여 사망 보험의 경우 보험 적용이 불가능한 점 안내드립니다.<br>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--자전거 추가배치-->
+                    <div class="faq__ faq_10">
+                        <ul class="faq-one">
+                            <li class="faq-head">자전거 추가배치를 신청하면 어떻게 반영되나요?</li>
+                            <li class="faq-txt">
+                                ○ 자전거 추가배치 신청시 해당 권역 배송원 및 관리 책임자의 자전거 관리 단말기에 배치 신청내역이 반영이 됩니다.<br>
+                                <br>
+                                ○ 해당 신청내역은 단기적으로는 해당일자 배차 동선 계획시, 장기적으로는 적정 자전거 대수 유지 관련 정책수립시 반영됩니다.<br>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--기타-->
+                    <div class="faq__ faq_11">
+                        <ul class="faq-one">
+                            <li class="faq-head">앱 로디이 느려요</li>
+                            <li class="faq-txt">
+                                안녕하세요. 따릉이입니다.<br>
+                                우선 불편을 끼쳐드려서 죄송합니다.<br>
+                                현재 앱 로딩 개선 관련 리뉴얼을 준비/진행중에 있습니다.<br>
+                                또한 지도의 gps 찾는 부분에서도 잘 못 찾을 경우,<br>
+                                지연되는 점 안내드립니다.<br>
+                                <br>
+                                첫번째로 팝업의 경우 지연사항이 존재하는 바,<br>
+                                하단 스크롤을 해주시면, 1주일동안 다시 보지 않기를 선택 부탁드립니다.<br>
+                                <br>
+                                두번째로 오른쪽 세번째 버튼(지도, 별 아이콘) 을 눌러주시면<br>
+                                즐겨찾기 화면으로 설정을 하실 수 있습니다.<br>
+                                이경우 앱 실행시 텍스트만 받아오고, 지도의 gps 미확인으로 인해<br>
+                                보다 빠르게 열릴수 있는 점 안내드립니다.<br>
+                                <br>
+                                더불어 빠른 앱 실행을 위해, 앱 개선에도 더욱 노력을 하도록 하겠습니다.<br>
+                                더 문의사항이 있으실 경우 시민의견수렴에 남겨주시고<br>
+                                기종, os 정보등을 남겨주시면 문제확인에 더욱 도움이 되겠습니다.<br>
+                                <br>
+                                감사합니다.<br>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--2. 문의하기 몸통-->
+            <div class="ask-container">
+                <h3>1:1 문의하기</h3>
+                <div class="ask-tablebox">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>제목</th>
+                                <td><input type="text" class="qa-title" id="qa-title" name="qa-title" value=""></td>
+                            </tr>
+                            <tr>
+                                <th>아이디</th>
+                                <td><input type="text" value="sy-ahn1014" disabled style="border:none; height:100%;"></td>
+                            </tr>
+                            <tr>
+                                <th>내용</th>
+                                <td>
+                                    <label class="writeAgree">반복 작성, 비문, 반말, 욕설, 비난, 상업광고 게재 시 해당 글이 답변없이 삭제됨을 동의합니다.</label>
+                                    <input type="checkbox" name="writeAgree" id="writeAgree" style="vertical-align: middle;">
+                                    <textarea id="qa-Content" class="qa-Content" name="qa-Content" ></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>사진 첨부</th>
+                                <td><input type="file" id="imgFile" name="imgFile" style="line-height: 42px; cursor: pointer;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="warning">시민의견 수렴 게시판은 회원 <span>누구나 자유롭게 의견을 게시할 수 있는 열린 공간</span>입니다. <span>사업성 광고, 욕설, 저속한 표현, 비방, 정치적 성향, 반복게시물 등은 관리자에 의해 통보없이 삭제</span>될 수 있으며, 홈페이지를 통해 불법 유해 정보 게시, 배포 시 정보통신망 이용촉진 및 정보보호 등에 대한 관한 법률 제 74조에 의거 1년 이하 징역 또는 1천만원 이하의 벌금에 처해질 수 있습니다.
+                </p>
+            </div>
+
+        </div>
+        
+
+
+        
+    </div>
+    <!--푸터-->
+    <footer class="footer">
+        <div class="footer-warp">
+            <div class="foot-top">
+                <ul class="foot-left">
+                    <li><a href="javascript:void(0)">이용약관</a></li>
+                    <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+                    <li><a href="javascript:void(0)">보험안내</a></li>
+                    <li><a href="javascript:void(0)">도움주신 분</a></li>
+                </ul>
+                <ul class="foot-right">
+                    <li class="foot-ico insta"><a href="javascript:void(0)"></a></li>
+                    <li class="foot-ico face"><a href="javascript:void(0)"></a></li>
+                    <li class="foot-ico blog"><a href="javascript:void(0)"></a></li>
+                </ul>
+            </div>
+            <div class="foot-bottom">
+                    <ul>
+                        <li>서울특별시 중구 세종대로 110 서울특별시  </li>
+                        <li>대표자 오세훈</li>
+                        <li>Tel : 1599-0120</li>
+                    </ul>
+                    <ul>
+                        <li>사업자등록번호 : 104-83-00469</li>
+                        <li>우편번호 04524</li>
+                    </ul>
+                    <p>COPYRIGHT ⓒ 2018 bikeseoul All RIGHTS RESERVED.</p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>

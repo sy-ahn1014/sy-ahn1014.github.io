@@ -1,0 +1,113 @@
+.emoticon-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.emoticon-box ul{    text-align: center; margin: 0 2%;}
+.emoticon-box ul li{ }
+
+.emo-img{width:50px; height:50px; margin: 0 auto; margin-bottom: 14px;}
+.emo-img img{width:100%; height:100%}
+.emo-p{font-size: 18px; line-height: 26px;}
+
+.pay-tablebox{
+    margin-top: 40px;
+}
+.pay-tablebox p{
+    padding-left: 15px;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+.txt-star{
+    position: relative;
+}
+.txt-star::before{
+    content: "*";
+    position: absolute;
+    top: 5px;
+    left: 2px;
+}
+.txt-star2{
+    position: relative;
+}
+.txt-star2::before{
+    content: "*";
+    position: absolute;
+    top: 0px;
+    left: -9px;
+}
+.pay-table{
+    box-sizing: border-box;
+    border:1px solid #CCCCCC;
+    width:100%;
+}
+.pay-tr{
+    
+border-bottom:1px solid #CCCCCC;
+}
+.pay-tr th{
+    padding: 20px 0;
+    background-color: #F2F5FB;
+}
+.pay-tr td{
+    font-size: 18px;
+    text-align: center;
+    border-right:1px solid #CCCCCC;
+    padding: 20px 0;
+    line-height: 22px;
+}
+.pay-tr td span{
+    color: #727272;
+    font-size: 14px;
+}
+
+.pay-btn{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 8px;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    padding: 16px 80px 16px 102px;
+    background-color: #49C474;
+    color: #fff;
+}
+.pay-btn::before{
+    content: "";
+position: absolute;
+top: 11px;
+left: 53px;
+width:40px;
+height:26px;
+background: url('../img/pay-btn.svg') no-repeat center/contain;
+}
+
+/*반응형*/
+@media (max-width: 1400px){
+    .wid1400-con{
+        width:95%;
+        padding: 0 2%;
+    }
+    
+}
+@media (max-width: 940px){
+    .emo-p{    font-size: 14px;
+        line-height: 19px;}
+        .pay-tablebox{
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+}
+@media (max-width: 640px){
+    .emoticon-box ul{    margin: 0 1%;}
+    .emo-p{    font-size: 12px;
+        line-height: 16px;}
+        .pay-tr td{    font-size: 14px;}
+}
+@media (max-width: 430px){
+    .emoticon-box{flex-direction: column;}
+    .emoticon-box ul{    margin-bottom: 2%;}
+}

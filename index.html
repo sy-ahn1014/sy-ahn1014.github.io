@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>안선영 | 포트폴리오</title>
+        <meta name="Description" content="UIUX 디퍼블리셔 안선영">
+        <meta name="Author" content="Ahn-SunYoung">
+        <meta
+            name="Keywords"
+            content="web, UIUX designer, publisher, portfolio, UIUX 디자이너, 웹 퍼블리셔, 포트폴리오">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/asy.ico">
+        <!--common-->
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/common.css">
+        <link rel="stylesheet" href="assets/css/index.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@400;500;700;900&display=swap"
+            rel="stylesheet">
+        <!--swiper-->
+        <link rel="stylesheet" href="assets/css/swiper.min.css"/>
+        <script src="assets/js/swiper.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                //scroll nav top
+                let header = document.querySelector(".header");
+                let headerHeight = header.offsetHeight;
+
+                window.onscroll = function () {
+                let windowTop = window.scrollY;
+                    // 스크롤 세로값이 헤더높이보다 크거나 같으면 
+                    // 헤더에 클래스 'drop'을 추가한다
+                if (windowTop >= headerHeight) {
+                    header.classList.add("nav_top");
+                } 
+                // 아니면 클래스 'drop'을 제거
+                else {
+                    header.classList.remove("nav_top");
+                }
+                };
+
+                //swiper slide
+                new Swiper('.swiper-banner', {
+                    loop: true,
+                    effect: 'fade',
+                    autoplay: {
+                        delay: 4000
+                    }
+                });
+
+                //nav click, scroll moving
+                var $menu = $('.navbar-nav li'),
+                    $contents = $('.scroll'),
+                    $doc = $('html, body');
+                $(function () {
+                    $menu.on('click', 'a', function (e) {
+                        var $target = $(this).parent(),
+                            idx = $target.index(),
+                            section = $contents.eq(idx),
+                            offsetTop = section
+                                .offset()
+                                .top;
+                        $doc
+                            .stop()
+                            .animate({
+                                scrollTop: offsetTop
+                            }, 800);
+                        return false;
+                    });
+
+                });
+
+                //scroll on-class
+                $(window).scroll(function () {
+                    var scltop = $(window).scrollTop() + 100;
+                    $.each($contents, function (idx, item) {
+                        var $target = $contents.eq(idx),
+                            i = $target.index(),
+                            targetTop = $target
+                                .offset()
+                                .top;
+
+                        if (targetTop <= scltop) {
+                            $menu.removeClass('on');
+                            $menu
+                                .eq(idx)
+                                .addClass('on');
+                        }
+                        if ($('.nav-contact').click == true) {
+                            $menu.removeClass('on');
+                            $('.nav-contact').addClass('on');
+                        }
+
+                    })
+                });
+
+                //work tab_menu
+                $(function(){
+                    $('.tab_list .work_btn').click(function(e) {
+                        e.preventDefault();
+                        $('.work_btn').removeClass('on');
+                        $(this).addClass('on');
+
+                        if($(".all.work_btn").hasClass("on") === true){
+                            $('.work-item').fadeIn( 1000 );
+                        }
+                        if($(".web.work_btn").hasClass("on") === true){
+                            $('.work-item').hide();
+                            $('.web-tab').fadeIn( 1000 );
+                        }
+                        if($(".mobile.work_btn").hasClass("on") === true){
+                            $('.work-item').hide();
+                            $('.mobile-tab').fadeIn( 1000 );
+                        }
+                        if($(".design.work_btn").hasClass("on") === true){
+                            $('.work-item').hide();
+                            $('.design-tab').fadeIn( 1000 );
+                        }
+
+
+
+                    });
+                });
+
+                //layer popup
+                $('.sumsung-a').click(function(e){
+                    
+                    e.preventDefault();
+                    console.log('삼성');
+                    $('.dim-layer').fadeIn();
+                    $('.pop-layer').hide();
+                    $('#layer1').fadeIn();
+                    
+                    
+                });
+                $('.bike-a').click(function(e){
+                    e.preventDefault();
+                    $('.dim-layer').fadeIn();
+                    $('.pop-layer').hide();
+                    $('#layer2').fadeIn();
+                    
+                });
+                $('.evian-a').click(function(e){
+                    e.preventDefault();
+                    $('.dim-layer').fadeIn();
+                    $('.pop-layer').hide();
+                    $('#layer3').fadeIn();
+                    
+                });
+                $('.pet-a').click(function(e){
+                    e.preventDefault();
+                    $('.dim-layer').fadeIn();
+                    $('.pop-layer').hide();
+                    $('#layer4').fadeIn();
+                    
+                });
+                $('.travel-a').click(function(e){
+                    e.preventDefault();
+                    $('.dim-layer').fadeIn();
+                    $('.pop-layer').hide();
+                    $('#layer5').fadeIn();
+                    
+                });
+                $('.detail1-a').click(function(e){
+                    e.preventDefault();
+                    $('.dim-layer').fadeIn();
+                    $('.pop-layer').hide();
+                    $('#layer6').fadeIn();
+                    
+                });
+                $('.detail2-a').click(function(e){
+                    e.preventDefault();
+                    $('.dim-layer').fadeIn();
+                    $('.pop-layer').hide();
+                    $('#layer7').fadeIn();
+                    
+                });
+                $('a.btn-layerClose').click(function(e){
+                    e.preventDefault();
+                    $('.dim-layer').fadeOut();
+                });
+
+            });
+        </script>
+    </head>
+    <body class="">
+        <header class="header">
+            <!--GNB-->
+            <aside id="nav">
+                <nav class="navbar ">
+                    <!--Logo, head-->
+                    <a class="navbar-brand" href="index.html">
+                        <h5>ASY</h5>
+                    </a>
+                    <!--gnb list-->
+                    <div class="" id="navbarNavAltMarkup">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="pc-on on">
+                                <a class="nav-item nav-link " href="#section1">HOME</a>
+                            </li>
+                            <li class="pc-on">
+                                <a class="nav-item nav-link " href="#section2">ABOUT</a>
+                            </li>
+                            <li class="pc-on">
+                                <a class="nav-item nav-link " href="#section3">PROJECT</a>
+                            </li>
+                            <li class="mo-on">
+                                <a
+                                    class="nav-item nav-link "
+                                    href="https://github.com/sy-ahn1014"
+                                    target="_blank">
+                                    <i class="github-img"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </aside>
+        </header>
+        <main>
+            <!-- Swiper -->
+            <h1 class="d-none">포트폴리오 메인</h1>
+            <div id="section1" class="top-main scroll ">
+                <div class="banner-content">
+                    <p>
+                        안녕하세요.<span class="motion">👋</span><br>
+                        <b>"moving on without stopping"</b><br>
+                        멈추지않고 나아가려 노력하는<br>
+                        안선영입니다.
+                    </p>
+                    <div class="">
+                        <ul class="about-box">
+                            <li class="about-notion about-hover">
+                                <a
+                                    href="https://www.notion.so/7b2253ac0f1046809efdc40fb9e0a120"
+                                    target="_blank">이력서(Notion)</a>
+                            </li>
+                            <li class="about-notion about-hover">
+                                <a
+                                href="assets/img/asy.pdf"
+                                    target="_blank">이력서(PDF)</a>
+                            </li>
+                            <li class="about-pdf about-hover">
+                                <a
+                                    href="assets/img/protfollio.pdf"
+                                    target="_blank">포트폴리오(PDF)</a>
+                            </li>
+                        </ul>
+                        <p class="about-caption">경력기술서 및 프로젝트 참여 내용은 <strong style="font-weight: 700; color: #222;">노션 이력서</strong>를 확인해주세요!😊</p>
+                    </div>
+                </div>
+
+                <div class="swiper-container swiper-banner">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide main-banner1"></div>
+                        <div class="swiper-slide main-banner2"></div>
+                        <div class="swiper-slide main-banner3"></div>
+                        <div class="swiper-slide main-banner4"></div>
+                    </div>
+                </div>
+                <!--서브 문구-->
+            </div>
+            <div id="section2" class="scroll ">
+                <h2 class="sub-title">ABOUT ME</h2>
+                <p class="sub-text">
+                    <span class="marks" style="transform: scaleX(-1);"></span>주니어회사에서 PL(프로젝트 리더)로서 쌓아올린 경험을 바탕으로,<br>
+                    섬세하게 사용자의 니즈를 헤아릴 줄 아는 직업정신과 팀워크 및 화합을 우선시하는 사람이 되겠습니다.👩‍💻<span class="marks"></span>
+                </p>
+                <div class="about-flex">
+                    <div class="about-me">
+                        <div class="card-img"><img src="assets/img/sunyoung.png" alt="안선영 미모티콘"></div>
+                        <h3 class="card-name">안선영</h3>
+                        <h4 class="card-a-name">SUN-YOUNG AHN</h4>
+                        <ul class="card-text">
+                            <li>1996.10.14(만 25세)</li>
+                            <li><a href="tel:010-9421-4476">010-9421-4476</a></li>
+                            <li><a href="mailto:tjsdud4474@naver.com">tjsdud4474@naver.com</a></li>
+                        </ul>
+                    </div>
+                    <!--경력 · 학력-->
+                    <div class="flex_col">
+                        <div class="sub-profile padd1">
+                            <h4 class="profill-h4">Career</h4>
+                            <dl>
+                                <dt><span class="time">2021.03 - 2022.01</span><br> </dt>
+                                <dd class="dt-">IEA(직급:프로)</dd>
+                                <dd>
+                                    -  웹/앱 솔루션 · 서비스  퍼블리싱, 디자인
+                                </dd>
+                            </dl>
+                            <h4 class="profill-h4 mt20">Education</h4>
+                            <dl>
+                                <dt ><span class="time">2020.06 - 2021.01</span><br></dt>
+                                <dd class="dt-">그린 컴퓨터 아카데미 수료</dd>
+                                <dd>
+                                    - 스마트 웹 & 앱 디자인 /퍼블리셔<br>
+                                    UI/UX콘텐츠 제작 취업과정
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="mt10"><span class="time">2015.03 - 2020.02</span><br></dt>
+                                <dd class="dt-">남서울대학교 졸업</dd>
+                                <dd>
+                                    -영상예술디자인학과
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="mt10"><span class="time">2012.03 - 2015.02</span><br></dt>
+                                <dd class="dt-">성일정보고등학교 졸업</dd>
+                                <dd class="">
+                                    -인터넷경영과
+                                </dd>
+                            </dl>
+                            
+                        </div>
+                        <div class="key-box padd1 ">
+                            <h4 class="profill-h4">😊It's me</h4>
+                            <span class="word">긍정적</span><span class="word">계획적</span><span class="word">책임감</span><span class="word">INFJ</span><span class="word">UI · UX</span><span class="word">웹 표준 · 웹 접근성</span>
+                        </div>
+
+                    </div>
+
+                    <!--자격증 목록-->
+                    <div class="flex_col">
+                        <div class="sub-profile wid-100 padd1">
+                            <h4 class="profill-h4">Certificate</h4>
+                            <ul>
+                                <li><span class="time mr8">2020.11</span>그래픽 마스터</li>
+                            </ul>
+                            <ul>
+                                <li><span class="time mr8">2020.04</span>웹디자인기능사 필기</li>
+                            </ul>
+                            <ul>
+                                <li><span class="time mr8">2020.12</span>ITQ MS워드</li>
+                            </ul>
+                            <ul>
+                                <li><span class="time mr8">2014.08</span>파워포인트</li>
+                            </ul>
+                        </div>
+                        <div class="sub-profile wid-100 padd1">
+                            <h4 class="profill-h4">Experience</h4>
+                            <dl>
+                                <dt ><span class="time">2020.06 - 2021.01</span><br></dt>
+                                <dd class="dt-">천안 교도소 전시회</dd>
+                                <dd>
+                                    - 아크릴을 활용한 작품 활동
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt ><span class="time">2020.06 - 2021.01</span><br></dt>
+                                <dd class="dt-">부산국제화랑아트페어</dd>
+                                <dd>
+                                    - 아크릴을 활용한 작품 활동
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt ><span class="time">2020.06 - 2021.01</span><br></dt>
+                                <dd class="dt-">여름하늘전(리수갤러리)</dd>
+                                <dd>
+                                    - 아크릴을 활용한 작품 활동
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt ><span class="time">2020.06 - 2021.01</span><br></dt>
+                                <dd class="dt-">남서울대학교 졸업작품 전시회</dd>
+                                <dd>
+                                    - 디지털아트 및 영상편집을 활용한 작품 활동
+                                </dd>
+                            </dl>
+                        </div>
+                        
+                    </div>
+                    
+                    <!--스킬 목록-->
+                    <div class="sub-tbox">
+                        <h4 class="profill-h4 pl-6">Skill</h4>
+                        <dl class="skill-list">
+                            <dt>Photoshop + Illustrator</dt>
+                            <dd>사진 편집 및 보정, 배너, 아이콘, 일러스트 등의 디자인 작업을 할 수 있습니다.</dd>
+                        </dl>
+                        <dl class="skill-list">
+                            <dt>Premiere Pro </dt>
+                            <dd>간단한 영상편집 및 효과, 자막 작업이 가능합니다.</dd>
+                        </dl>
+                        <dl class="skill-list">
+                            <dt>Xd + Pigma</dt>
+                            <dd>웹 사이트의 시안과 프로토타입 제작이 가능합니다.</dd>
+                        </dl>
+                        <dl class="skill-list">
+                            <dt>HTML + CSS</dt>
+                            <dd>콘텐츠 내용에 맞은 시맨틱 태그를 사용하여 코드를 작성합니다.<br>
+                                웹 표준 및 웹 접근성을 생각하며 반응형 레이아웃을 제작합니다.
+                            </dd>
+                        </dl>
+                        <dl class="skill-list">
+                            <dt>Jquery + JavaScript
+                            </dt>
+                            <dd>
+                                제이쿼리를 활용한 다양한 애니메이션, 기능을 구현하고
+                                <br>
+                                간단한 클릭 이벤트 자바스크립트를 사용 할 수 있습니다.
+                            </dd>
+                        </dl>
+                        <dl class="skill-list">
+                            <dt>Co-work</dt>
+                            <dd class="">
+                                원활한 협업을 위해 다양한 분야의 지식을 배우고 적용하며 공유합니다.
+                                <br>
+                                기획자, 디자이너, 개발자와 자주 소통하며, 함께 좋은 결과물을 만들고자 노력합니다.
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div id="section3" class="scroll">
+                <h2 class="d-none">포트폴리오 프로젝트 목록</h2>
+                <h2 class="sub-title">PROJECT</h2>
+                <!--프로젝트 탭리스트-->
+                <ul class="tab_list">
+                    <li>
+                        <a href="#All" class="all work_btn on">All</a>
+                    </li>
+                    <li>
+                        <a href="#Web" class="web work_btn">Web</a>
+                    </li>
+                    <li>
+                        <a href="#Mobile" class="mobile work_btn">Mobile</a>
+                    </li>
+                    <li>
+                        <a href="#Design" class="design work_btn">Design</a>
+                    </li>
+                </ul>
+                <!--프로젝트 몸통-->
+                <ul class="work-list all-list">
+                    <!--프로젝트 개별 바디-->
+                    <li class="work-item web-tab" style="">
+                        <a href="" class="work-a sumsung-a">
+                            <img class="work-img" src="assets/img/sumsung-thumnail.jpg" alt="포트폴리오 이미지">
+                            <div class="workbody-card">
+                                <h5 class="workcard-title">삼성카드 웹 UI/UX 리뉴얼</h5>
+                                <p class="workcard-text">
+                                    기존 페이지의 문제점을 찾아 화면 기획을 다시 구성하고, 
+                                    사용성을 중점으로 리뉴얼을 진행했습니다.
+                                </p>
+                                <p class="tag-box">
+                                    <span class="tag-text">#리뉴얼</span>
+                                    <span class="tag-text">#디자인</span>
+                                    <span class="tag-text">#WEB</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="work-item web-tab" >
+                        <a href="#" class="work-a bike-a">
+                            <img class="work-img" src="assets/img/bike-thumnail.jpg" alt="포트폴리오 이미지">
+                            <div class="workbody-card">
+                                <h5 class="workcard-title">서울 따릉이 웹 리뉴얼<br class="mo-br"> 컨셉 디자인</h5>
+                                <p class="workcard-text">
+                                    정리가 안돼 방치된 웹 사이트를 일러스트를 사용하여 리디자인 하였습니다.
+                                </p>
+                                <p class="tag-box">
+                                    <span class="tag-text">#리뉴얼</span>
+                                    <span class="tag-text">#반응형</span>
+                                    <span class="tag-text">#WEB</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="work-item web-tab" >
+                        <a href="#" class="work-a evian-a">
+                            <img class="work-img" src="assets/img/evian-thumnail.jpg" alt="포트폴리오 이미지">
+                            <div class="workbody-card">
+                                <h5 class="workcard-title">에비앙 웹<br class="mo-br"> 컨셉 디자인</h5>
+                                <p class="workcard-text">
+                                    에비앙의 제작 스토리 라인을 일러스트와 페럴렉스를 통해 표현하였습니다.
+                                </p>
+                                <p class="tag-box">
+                                    <span class="tag-text">#일러스트</span>
+                                    <span class="tag-text">#컨셉 디자인</span>
+                                    <span class="tag-text">#페럴렉스</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="work-item mobile-tab" style="">
+                        <a href="" class="work-a pet-a">
+                            <img class="work-img" src="assets/img/pet-thumnail.jpg" alt="포트폴리오 이미지">
+                            <div class="workbody-card">
+                                <h5 class="workcard-title">펫라이프<br class="mo-br"> 반려동물 케어 앱</h5>
+                                <p class="workcard-text">
+                                    번거로운 동물 수첩의 기능을 대신하여 “기록” 하고 “관리” 하는 앱을
+                                    디자인 해보았습니다.
+                                </p>
+                                <p class="tag-box">
+                                    <span class="tag-text">#Mobile</span>
+                                    <span class="tag-text">#디자인</span>
+                                    <span class="tag-text">#자체 기획</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="work-item mobile-tab" style="">
+                        <a href="" class="work-a travel-a">
+                            <img class="work-img" src="assets/img/trip-thumnail.jpg" alt="포트폴리오 이미지">
+                            <div class="workbody-card">
+                                <h5 class="workcard-title">트립플랜, <br class="mo-br">여행 아카이브 공유 서비스</h5>
+                                <p class="workcard-text">
+                                    개인별 맞춤 추천 및 여행 아카이브 공유 서비스를 제공하는 앱을
+                                    디자인 해보았습니다.
+                                </p>
+                                <p class="tag-box">
+                                    <span class="tag-text">#Mobile</span>
+                                    <span class="tag-text">#디자인</span>
+                                    <span class="tag-text">#자체 기획</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="work-item design-tab" style="">
+                        <a href="" class="work-a detail1-a">
+                            <img class="work-img" src="assets/img/design1-thumnail.jpg" alt="포트폴리오 이미지">
+                            <div class="workbody-card">
+                                <h5 class="workcard-title">상품 페이지 디자인</h5>
+                                <p class="workcard-text">
+                                    뜨앙뜨앙의 비건비누 상품 상세페이지 디자인 작업입니다.
+                                </p>
+                                <p class="tag-box">
+                                    <span class="tag-text">#포토샵</span>
+                                    <span class="tag-text">#상세 페이지</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="work-item design-tab" style="">
+                        <a href="" class="work-a detail2-a">
+                            <img class="work-img" src="assets/img/design2-thumnail.jpg" alt="포트폴리오 이미지">
+                            <div class="workbody-card">
+                                <h5 class="workcard-title">프르모션 디자인</h5>
+                                <p class="workcard-text">
+                                    여름 캠핑을 주제로 한 프로모션 디자인작업입니다.
+                                </p>
+                                <p class="tag-box">
+                                    <span class="tag-text">#포토샵</span>
+                                    <span class="tag-text">#프로모션</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+        </main>
+        <footer id="footer">
+            <p>Thanks for visiting my Website😊</p>
+            <p>Copyright ⓒ  Ahn-sunyoung All rights reserved.</p>
+        </footer>
+        <!--레이어 팝업-->
+        <div class="dim-layer" >
+            <div class="dimBg"></div>
+            <!--삼성카드-->
+            <div id="layer1" class="pop-layer">
+                <div class="layer-scroll">
+                    <div class="btn-r">
+                        <a href="#" class="btn-layerClose"></a>
+                    </div>
+                    <div class="pop-container">
+                        <div class="pop-conts">
+                            
+                            <!--content //-->
+                            <h4 class="layer-head">삼성카드 웹 UI/UX 리뉴얼</h4>
+                            <div style="    display: flex; align-items: center; justify-content: center;">
+                                <button class="layer-codebtn2" type="button" onclick="window.open('project/sumsung_index.html')">퍼블리싱 메인페이지</button>
+                                <button class="layer-codebtn2" type="button" onclick="window.open('project/sumsung_subpage.html')">퍼블리싱 서브페이지</button>
+                            </div>
+                            <img class="layer-img" src="assets/img/design-sumsung.jpg" alt="삼성카드 웹 UI/UX 리뉴얼">
+                            </p>
+            
+                            
+                            <!--// content-->
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!--따릉이 레이어-->
+            <div id="layer2" class="pop-layer">
+                <div class="layer-scroll">
+                    <div class="btn-r">
+                        <a href="#" class="btn-layerClose"></a>
+                    </div>
+                    <div class="pop-container">
+                        <div class="pop-conts">
+                            
+                            <!--content //-->
+                            <h4 class="layer-head">서울 따릉이 웹 리뉴얼</h4>
+                            <button class="layer-codebtn" type="button" onclick="window.open('project/cycle_index.html')">Publishing Link</button>
+                            <img class="layer-img" src="assets/img/design-bike.jpg" alt="서울 따릉이 웹 리뉴얼">
+                            </p>
+                            
+                            <!--// content-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--에비앙 레이어-->
+            <div id="layer3" class="pop-layer">
+                <div class="layer-scroll">
+                    <div class="btn-r">
+                        <a href="#" class="btn-layerClose"></a>
+                    </div>
+                    <div class="pop-container">
+                        <div class="pop-conts">
+                            
+                            <!--content //-->
+                            <h4 class="layer-head">에비앙 웹 컨셉 디자인</h4>
+                            <button class="layer-codebtn" type="button" onclick="window.open('project/evian.html')">Publishing Link</button>
+                            <img class="layer-img" src="assets/img/design-evian.jpg" alt="에비앙 웹 컨셉 디자인">
+                            </p>
+                            
+                            <!--// content-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--펫라이프 레이어-->
+            <div id="layer4" class="pop-layer">
+                <div class="layer-scroll">
+                    <div class="btn-r">
+                        <a href="#" class="btn-layerClose"></a>
+                    </div>
+                    <div class="pop-container">
+                        <div class="pop-conts">
+                            
+                            <!--content //-->
+                            <h4 class="layer-head">펫 라이프</h4>
+                            <p style="text-align: center;margin: 24px 0 36px;">반려동물 케어 앱</p>
+                            <div style="padding-bottom: 20px; display: block;"></div>
+                            <!-- <button class="layer-codebtn" type="button" onclick="window.open('project/evian.html')">Publishing Link</button> -->
+                            <img class="layer-img" src="assets/img/design-pet.jpg" alt="펫 라이프 반려동물 케어 앱">
+                            </p>
+                            
+                            <!--// content-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--여행추천 레이어-->
+            <div id="layer5" class="pop-layer">
+                <div class="layer-scroll">
+                    <div class="btn-r">
+                        <a href="#" class="btn-layerClose"></a>
+                    </div>
+                    <div class="pop-container">
+                        <div class="pop-conts">
+                            
+                            <!--content //-->
+                            <h4 class="layer-head">트립 플랜</h4>
+                            <p style="text-align: center;margin: 24px 0 36px;">개인별 맞춤 추천 및 여행 아카이브 공유 서비스</p>
+                            <div style="padding-bottom: 20px; display: block;"></div>
+                            <!-- <button class="layer-codebtn" type="button" onclick="window.open('project/evian.html')">Publishing Link</button> -->
+                            <img class="layer-img" src="assets/img/design-trip.jpg" alt="트립 플랜, 개인별 맞춤 추천 및 여행 아카이브 공유 서비스">
+                            </p>
+                            
+                            <!--// content-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--상품상세 레이어-->
+            <div id="layer6" class="pop-layer">
+                <div class="layer-scroll">
+                    <div class="btn-r">
+                        <a href="#" class="btn-layerClose"></a>
+                    </div>
+                    <div class="pop-container">
+                        <div class="pop-conts">
+                            
+                            <!--content //-->
+                            <h4 class="layer-head">상품 상세 페이지</h4>
+                            <p style="text-align: center;margin: 24px 0 36px;">뜨앙뜨앙 반려동물 비건비누 상세페이지 디자인 작업입니다.</p>
+                            <!-- <button class="layer-codebtn" type="button" onclick="window.open('project/evian.html')">Publishing Link</button> -->
+                            <img class="layer-img" src="assets/img/design-detail1.jpg" alt="서울 따릉이 웹 리뉴얼" style="width:80%!important;">
+                            
+                            
+                            <!--// content-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--프로모션 레이어-->
+            <div id="layer7" class="pop-layer">
+                <div class="layer-scroll">
+                    <div class="btn-r">
+                        <a href="#" class="btn-layerClose"></a>
+                    </div>
+                    <div class="pop-container">
+                        <div class="pop-conts">
+                            
+                            <!--content //-->
+                            <h4 class="layer-head">여름 캠핑 프로모션 디자인작업</h4>
+                            <p style="text-align: center;margin: 24px 0 36px;">여름 캠핑을 주제로 한 프로모션 디자인 작업입니다.</p>
+                            <!-- <button class="layer-codebtn" type="button" onclick="window.open('project/evian.html')">Publishing Link</button> -->
+                            <img class="layer-img" src="assets/img/design-detail2.jpg" alt="프로모션 디자인작업" style="width:80%!important;">
+                            
+                            
+                            <!--// content-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+
+</html>

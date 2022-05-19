@@ -1,0 +1,295 @@
+.qna-subbox{
+    clear: both;
+    width:1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.qna-subbox>li.active{
+    background-color: #2CA173;
+}
+.qna-subbox>li.active a h3{
+    color: #fff;
+}
+.qna-subbox>li.active a p{
+    color: #fff;
+}
+.qna-subbox>li{
+    background-color: #F2F5FB; 
+    width:100%;
+}
+.qna-subbox>li>a{
+    box-sizing: border-box;
+    padding: 24px 0;
+    padding-left: 110px;
+    width:100%;
+}
+.qna-subbox h3{
+    margin-bottom: 12px;
+    font-size: 24px;
+    color: #000;
+}
+.qna-subbox p{
+    font-size: 14px;
+    color: #666;
+}
+
+
+.qna_srhbox{
+    position: relative;
+    box-sizing: border-box;
+    margin: 20px 0;
+    height:42px;
+}
+.qna-srh{
+    position: relative;
+    float: right;
+    border-radius: 6px;
+    border:1px solid #CCCCCC;
+    padding: 14px 18px;
+    width:400px;
+    height:100%;
+}
+.qna-btn{
+    cursor: pointer;
+    z-index: 9;
+    display: block;
+    width:18px;
+    height:18px;
+    position: absolute;
+    top: 13px;
+    right: 19px;
+    background: url('../img/srhico.svg') no-repeat center/contain;
+}
+
+/*자주한느 질문*/
+.faq-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.faq-subnav-box{
+    margin-right: 20px;
+}
+.faq-subnav{
+    width: 235px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.faq-subnav>li{
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 20px;
+    color: #6E6E6E;
+    width:100%;
+    padding: 18px 0;
+    padding-left: 20px;
+    transition: background-color .2s ease;
+}
+.faq-subnav>li.active{
+    color: #2CA173;
+    font-weight: 700;
+}
+.faq-subnav>li:hover{
+    border-radius: 8px;
+    background-color: #F2F5FB;
+}
+
+.faq-right{
+    width:100%;
+    border-top:2px solid #717171;
+}
+.faq-one{}
+.faq-head{
+    cursor: pointer;
+    position: relative;
+    padding-left: 50px;
+    height:60px;
+    line-height: 60px;
+    font-size: 20px;
+    color: #6E6E6E;
+    border-bottom:1px solid #CCCCCC;
+}
+.faq-head:before{
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 12px;
+    width:22px;
+    height:24px;
+    display: block;
+    background: url('../img/q.svg') no-repeat center/contain;
+}
+.faq-txt{
+    display: none;
+    height:0px;
+    position: relative;
+    padding: 24px 0;
+    padding-left: 50px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    background-color: #F2F5FB;
+}
+.faq-txt.active{
+    display: block;
+    height:auto;
+}
+.faq-txt::before{
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 14px;
+    width:20px;
+    height:24px;
+    display: block;
+    background: url('../img/a.svg') no-repeat center/contain;
+}
+
+.faq_2{display: none;}
+.faq_3{display: none;}
+.faq_4{display: none;}
+.faq_5{display: none;}
+.faq_6{display: none;}
+.faq_7{display: none;}
+.faq_8{display: none;}
+.faq_9{display: none;}
+.faq_10{display: none;}
+.faq_11{display: none;}
+
+
+
+/*문의하기 몸통*/
+.ask-container{
+    display: none;
+    border-top: 2px solid #717171;
+}
+.ask-container h3{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.ask-tablebox{
+}
+.ask-tablebox table{
+    width:100%;
+}
+.ask-tablebox table tr th{
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 42px;
+    color: #222;
+    width: 280px;
+    padding: 10px 10px;
+    padding-left: 40px;
+    background-color: #fafafa;
+    border-top: 1px #ccc solid;
+    min-height: 42px;
+    text-align: left;
+    box-sizing: border-box;
+}
+.ask-tablebox table tr td{
+    padding: 10px 20px;
+    font-size: 13px;
+    color: #666;
+    background-color: #fff;
+    border-top: 1px #ccc solid;
+    height: 38px;
+}
+.ask-tablebox table tr:last-of-type{
+    border-bottom:1px solid #ccc;
+}
+
+.qa-title{
+    padding-left: 10px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.qa-Content{
+    margin-top: 8px;
+    padding: 20px ;
+    height: 250px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.writeAgree{
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.warning{
+    padding: 20px 15px;
+    margin: 10px auto 50px auto;
+    background-color: #efefef;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #666;
+    line-height: 22px;
+}
+.warning span{    color: #f3414f;}
+
+/*반응형*/
+@media (max-width: 1400px){
+    .wid1400-con{
+        width:100%;
+        padding: 0 2%;
+        box-sizing: border-box;
+    }
+    .qna-subbox{
+        width:100%;
+    }
+}
+@media (max-width: 1080px){
+    .qna-subbox>li>a{padding-left:6%;}
+}
+@media (max-width: 900px){
+    .faq-head{
+        height: 50px;
+        line-height: 50px;
+        font-size: 15px;
+    }
+    .faq-head:before{
+        top:11px;
+    }
+    .faq-subnav>li{
+        font-size: 16px;
+    }
+    .faq-subnav{
+        width:152px;
+    }
+}
+@media (max-width: 870px){
+    .qna-subbox h3{
+        font-size: 18px;
+    }
+    .qna-subbox p{
+        font-size: 12px;
+    }
+    .qna-subbox>li>a{padding-left:2%; max-height:115px;}
+}
+@media (max-width: 600px){
+    .faq-head{
+        height: 50px;
+        line-height: 21px;
+        font-size: 15px;
+        padding-top: 17px;
+    }
+    .faq-head:before{
+        top: 19px;
+    }
+}
+@media (max-width: 475px){
+    .faq-container{    flex-direction: column;}
+    .faq-subnav{    width: 95vw; display: block;}
+    .qna-subbox p{    line-height: 16px;}
+    .qna-srh{    width: 85%;}
+}

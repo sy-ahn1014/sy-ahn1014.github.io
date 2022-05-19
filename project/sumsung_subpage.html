@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼성카드</title>
+    <meta name="title" content=" 삼성카드 ">
+    <meta name="keywords" content=" 삼성카드,삼카,카드추천,숫자카드,id카드,taptap카드,삼성카드 앱,실용적인 삼성카드,삼성카드 홈페이지,삼성카드 하이패스,삼성카드 고객센터,삼성카드 쇼핑, 삼성카드 추천,삼성카드 포인트">
+    <meta name="description" content="진짜 나를 담은 카드, 삼성카드입니다.">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/samsung.ico">
+    <!--common-->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/sumsung_index.css">
+    <link rel="stylesheet" href="../assets/css/sumsung_subpage.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!--swiper-->
+    <link rel="stylesheet" href="../assets/css/swiper.min.css"/>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //헤더 토글 클릭시 개인,법인
+            $( '.dropdown' ).click( function() {
+            $('.dropdown-menu').toggleClass('on');
+            });
+
+            //검색창 클릭시
+            // $( '.search-button' ).click( function() {
+            // $('.search_sec').toggleClass('on');
+            // });
+
+                $('.nav-head>a').hover(function(){
+                    var _this = $(this);
+                    $('.nav-box').hide();
+                    _this.next(".nav-box").show();
+                    _this.addClass('hover');
+                    if(_this.next(".nav-box").css('display') == 'block'){
+                        $('.nav-head>a').not(_this).removeClass('hover');
+                    }
+                });
+
+                $('.nav-box').mouseleave(function() {
+                    $(this).hide();
+                    $('.nav-head>a').removeClass('hover');
+                });
+
+                //서브페이지 상단 배너
+                var swiper = new Swiper('.sub-swiper', {
+                    loop : true,
+                    effect : 'fade',
+                        autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
+                        delay : 3000,   // 시간 설정
+                        disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+                    },
+                });
+
+                //서브페이지 카드 카테고리 클릭 이벤트
+                $( '.name-category>li' ).click( function() {
+                    var cate_ = $(this).index()
+                    console.log(cate_);
+
+                    if(cate_ == 0){
+                        $('.name-category>li').removeClass('active');
+                        $(this).addClass('active');
+                        $('.sub-list-box').hide();
+                        $('.cate1').show();
+                    }
+                    if(cate_ == 1){
+                        $('.name-category>li').removeClass('active');
+                        $(this).addClass('active');
+                        $('.sub-list-box').hide();
+                        $('.cate2').show();
+                    }
+                    if(cate_ == 2){
+                        $('.name-category>li').removeClass('active');
+                        $(this).addClass('active');
+                        $('.sub-list-box').hide();
+                        $('.cate3').show();
+                    }
+                    if(cate_ == 3){
+                        $('.name-category>li').removeClass('active');
+                        $(this).addClass('active');
+                        $('.sub-list-box').hide();
+                        $('.cate4').show();
+                    }
+                    if(cate_ == 4){
+                        $('.name-category>li').removeClass('active');
+                        $(this).addClass('active');
+                        $('.sub-list-box').hide();
+                        $('.cate5').show();
+                    }
+                    if(cate_ == 5){
+                        $('.name-category>li').removeClass('active');
+                        $(this).addClass('active');
+                        $('.sub-list-box').hide();
+                        $('.cate6').show();
+                    }
+                    if(cate_ == 6){
+                        $('.name-category>li').removeClass('active');
+                        $(this).addClass('active');
+                        $('.sub-list-box').hide();
+                        $('.cate7').show();
+                    }
+            });
+
+
+            });
+    </script>
+
+</head>
+<body>
+    <div id="main" class="main">
+        <!--헤더-->
+        <header id="header">
+            <div class="header">
+                <!--헤더 상단-->
+                <div class="header-top">
+                    <div class="header-left">
+                        <h1><a href="#"><img src="../assets/img/sumsung_logo.png" alt="삼성카드 로고"></a></h1>
+                        <ul class="header-dep">
+                            <li>
+                                <button type="button" class="dropdown">개인</button>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li>개인</li>
+                                        <li>법인</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-right">
+                        <ul class="header-right-ul">
+                            <li><a href="javascript:void(0)">소비자포털</a></li>
+                            <li class="line-" style="margin-right: 0px;"><a href="javascript:void(0)" >상품공시실</a></li>
+                        </ul>  
+                    </div>
+                </div>
+                <!--헤더 gnb-->
+                <nav class="nav">
+                    <ul class="nav-ul">
+                        <li class="nav-head"><a href="javascript:void(0)">My Account</a>
+                            <!--gnb sub-->
+                            <div class="nav-box">
+                                <div class="nav-box-in">
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">명세서</li>
+                                        <li><a href="javascript:void(0)">이번달 명세서</a></li>
+                                        <li><a href="javascript:void(0)">명세서 표기 제외</a></li>
+                                        <li><a href="javascript:void(0)">다음달 결제예정금액</a></li>
+                                        <li><a href="javascript:void(0)">이용분석</a></li>
+                                        <li><a href="javascript:void(0)">명세서 재발송</a></li>
+                                        <li><a href="javascript:void(0)">명세서 수령방법</a></li>
+                                    </ul>
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">이용내역</li>
+                                        <li><a href="javascript:void(0)">카드 이용/취소/매출전표 내역</a></li>
+                                        <li><a href="javascript:void(0)">개인상버자용 카드 이용내역</a></li>
+                                        <li><a href="javascript:void(0)">단기카드대출/장기카드대출내역</a></li>
+                                        <li><a href="javascript:void(0)">정기결제 이용내역</a></li>
+                                        <li><a href="javascript:void(0)">장기렌터가/오토리스 계약내역</a></li>
+                                        <li><a href="javascript:void(0)">할부금융 이용내역</a></li>
+                                        <li><a href="javascript:void(0)">소득공제 내역</a></li>
+                                        <li><a href="javascript:void(0)">eward 이용 내역</a></li>
+                                    </ul>
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">이용한도</li>
+                                        <li><a href="javascript:void(0)">카드 이용한도</a></li>
+                                        <li><a href="javascript:void(0)">목적별 추가한도</a></li>
+                                    </ul>
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">카드대금 결제</li>
+                                        <li><a href="javascript:void(0)">즉시결제</a></li>
+                                        <li><a href="javascript:void(0)">가상계좌</a></li>
+                                        <li><a href="javascript:void(0)">입금내역</a></li>
+                                        <li><a href="javascript:void(0)">국내/해외 일시불 분할납부</a></li>
+                                        <li><a href="javascript:void(0)">단기/장기카드대출로 결제</a></li>
+                                    </ul>
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">개인정보</li>
+                                        <li><a href="javascript:void(0)">내 정보 한눈에 보기</a></li>
+                                        <li><a href="javascript:void(0)">결제일</a></li>
+                                        <li><a href="javascript:void(0)">결제계좌</a></li>
+                                        <li><a href="javascript:void(0)">마케팅 수신 동의</a></li>
+                                    </ul>
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">카드정보</li>
+                                        <li><a href="javascript:void(0)">카드발급상황</a></li>
+                                        <li><a href="javascript:void(0)">카드사용등록</a></li>
+                                        <li><a href="javascript:void(0)">카드정보 변경</a></li>
+                                        <li><a href="javascript:void(0)">분실 신고/해제</a></li>
+                                        <li><a href="javascript:void(0)">카드 재발급</a></li>
+                                    </ul>
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">서류간편발급</li>
+                                        <li><a href="javascript:void(0)">서류 발급</a></li>
+                                        <li><a href="javascript:void(0)">서식 자료실</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-head"><a href="">카드</a>
+                            <!--gnb sub-->
+                            <div class="nav-box">
+                                <div class="nav-box-in">
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">카드안내</li>
+                                        <li><a href="javascript:void(0)">카드 한눈에 보기</a></li>
+                                        <li><a href="javascript:void(0)">내게 맞는 카드 찾기</a></li>
+                                    </ul>
+                                    <div class="nav-box-div">
+                                        <h2 class="nav-box-title">카드신청</h2>
+                                        <ul class="nav-box-ul">
+                                            <li><a href="javascript:void(0)">삼성 iD 카드</a></li>
+                                            <li><a href="javascript:void(0)">디지털신청전용카드</a></li>
+                                            <li><a href="javascript:void(0)">taptap카드</a></li>
+                                            <li><a href="javascript:void(0)">프리미엄카드</a></li>
+                                            <li><a href="javascript:void(0)">아메리칸엑스프레스카드</a></li>
+                                            <li><a href="javascript:void(0)">숫자카드</a></li>
+                                            <li><a href="javascript:void(0)">제휴카드</a></li>
+                                        </ul>
+                                        <ul class="nav-box-ul">
+                                            <li><a href="javascript:void(0)">개인사업자카드</a></li>
+                                            <li><a href="javascript:void(0)">후불하이패스카드</a></li>
+                                            <li><a href="javascript:void(0)">플러스카드</a></li>
+                                            <li><a href="javascript:void(0)">SFC카드</a></li>
+                                            <li><a href="javascript:void(0)">체크카드</a></li>
+                                            <li><a href="javascript:void(0)">가족카드</a></li>
+                                            <li><a href="javascript:void(0)">청소년 가족카드</a></li>
+                                            <li><a href="javascript:void(0)">법인개별카드</a></li>
+                                        </ul>
+                                    </div>
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">기프트카드</li>
+                                        <li><a href="javascript:void(0)">안내/구매</a></li>
+                                        <li><a href="javascript:void(0)">충전</a></li>
+                                        <li><a href="javascript:void(0)">잔액환불</a></li>
+                                        <li><a href="javascript:void(0)">부가서비스</a></li>
+                                        <li><a href="javascript:void(0)">구매 및 배송조회</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-head"><a href="">혜택</a>
+                            <!--gnb sub-->
+                            <div class="nav-box" >
+                                <div class="nav-box-in">
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">이벤트</li>
+                                        <li><a href="javascript:void(0)">GAME ZONE</a></li>
+                                        <li><a href="javascript:void(0)">이벤트</a></li>
+                                    </ul>
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">카드 혜택</li>
+                                        <li><a href="javascript:void(0)">나의 맞춤 혜택</a></li>
+                                        <li><a href="javascript:void(0)">나의 카드 혜택</a></li>
+                                        <li><a href="javascript:void(0)">AI 추천</a></li>
+                                        <li><a href="javascript:void(0)">공통서비스 S</a></li>
+                                        <li><a href="javascript:void(0)">헤택리포트</a></li>
+                                        <li><a href="javascript:void(0)">친구에게 카드추천</a></li>
+                                    </ul>
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">LINK</li>
+                                        <li><a href="javascript:void(0)">나의 LINK 혜택</a></li>
+                                        <li><a href="javascript:void(0)">월별 LINK 혜택 이용내역</a></li>
+                                    </ul>
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">포인트</li>
+                                        <li><a href="javascript:void(0)">포인트 조회/사용</a></li>
+                                        <li><a href="javascript:void(0)">선지급포인트 서비스</a></li>
+                                        <li><a href="javascript:void(0)">S선지급포인트 서비스</a></li>
+                                        <li><a href="javascript:void(0)">포인트연계할부 서비스(세이브서비스)</a></li>
+                                        <li><a href="javascript:void(0)">삼성전자멤버십 서비스</a></li>
+                                    </ul>
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">정부지원 사업</li>
+                                        <li><a href="javascript:void(0)">정부지원금</a></li>
+                                        <li><a href="javascript:void(0)">상생지원금</a></li>
+                                        <li><a href="javascript:void(0)">국가바우처</a></li>
+                                        <li><a href="javascript:void(0)">유가보조금</a></li>
+                                    </ul>
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">혜택 가맹점</li>
+                                        <li><a href="javascript:void(0)">혜택 모아보기</a></li>
+                                        <li><a href="javascript:void(0)">무이자할부 가맹점</a></li>
+                                        <li><a href="javascript:void(0)">보너스클럽</a></li>
+                                    </ul>
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">라운지</li>
+                                        <li><a href="javascript:void(0)">프리미엄 리워즈</a></li>
+                                        <li><a href="javascript:void(0)">프리미엄카드</a></li>
+                                        <li><a href="javascript:void(0)">트레이더스</a></li>
+                                        <li><a href="javascript:void(0)">국민행복카드</a></li>
+                                        <li><a href="javascript:void(0)">SFC</a></li>
+                                        <li><a href="javascript:void(0)">BIZ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-head"><a href="">정기결제</a>
+                            <!--gnb sub-->
+                            <div class="nav-box" >
+                                <div class="nav-box-in">
+                                    <h2><a href="javascript:void(0)">정기결제 메인</a></h2>
+                                <ul class="nav-box-ul">
+                                    <li class="nav-box-title">구독</li>
+                                    <li><a href="javascript:void(0)">안심쇼핑플러스상품</a></li>
+                                    <li><a href="javascript:void(0)">디지털매거진 상품</a></li>
+                                    <li><a href="javascript:void(0)">안심 주차번호 서비스</a></li>
+                                    <li><a href="javascript:void(0)">스마트오토케어상품</a></li>
+                                </ul>
+                                <div class="nav-box-div">
+                                    <h2 class="nav-box-title">납부</h2>
+                                    <ul class="nav-box-ul">
+                                        <li><a href="javascript:void(0)">전화 요금</a></li>
+                                        <li><a href="javascript:void(0)">아파트 관리비</a></li>
+                                        <li><a href="javascript:void(0)">도시가스요금</a></li>
+                                        <li><a href="javascript:void(0)">4대 사회보험</a></li>
+                                        <li><a href="javascript:void(0)">전기 요금</a></li>
+                                        <li><a href="javascript:void(0)">부동산 임대료</a></li>
+                                    </ul>
+                                    <ul class="nav-box-ul">
+                                        <li><a href="javascript:void(0)">국세/지방세</a></li>
+                                        <li><a href="javascript:void(0)">농지보전부담금</a></li>
+                                        <li><a href="javascript:void(0)">명의보호알림</a></li>
+                                        <li><a href="javascript:void(0)">금융안심보상</a></li>
+                                        <li><a href="javascript:void(0)">간편식 정기쇼핑</a></li>
+                                        <li><a href="javascript:void(0)">안심쇼핑플러스</a></li>
+                                    </ul>
+                                </div>
+                                <ul class="nav-box-ul">
+                                    <li class="nav-box-title">약정</li>
+                                    <li><a href="javascript:void(0)">간편식 정기쇼핑(My 큐커 플랜)</a></li>
+                                </ul>
+                                <ul class="nav-box-ul">
+                                    <li class="nav-box-title">알림</li>
+                                    <li><a href="javascript:void(0)">카드이용 알림</a></li>
+                                    <li><a href="javascript:void(0)">부정사용방지알림</a></li>
+                                    <li><a href="javascript:void(0)">휴대폰인증서 서비스</a></li>
+                                    <li><a href="javascript:void(0)">세이프케어상품</a></li>
+                                    <li><a href="javascript:void(0)">종합정보 보호상품</a></li>
+                                    <li><a href="javascript:void(0)">명의도용차단 서비스</a></li>
+                                    <li><a href="javascript:void(0)">채무면제/유예상품</a></li>
+                                </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-head"><a href="">금융</a>
+                            <!--gnb sub-->
+                            <div class="nav-box" >
+                                <div class="nav-box-in">
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">대출</li>
+                                        <li><a href="javascript:void(0)">단기카드대출</a></li>
+                                        <li><a href="javascript:void(0)">장기카드대출</a></li>
+                                        <li><a href="javascript:void(0)">삼성카드 신용대출</a></li>
+                                        <li><a href="javascript:void(0)">일부결제금액이월약정(리볼빙)</a></li>
+                                    </ul>
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">할부금융</li>
+                                        <li><a href="javascript:void(0)">전자/내구재 할부금융</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-head"><a href="">자동차</a>
+                            <!--gnb sub-->
+                            <div class="nav-box" >
+                                <div class="nav-box-in">
+                                    <h2><a href="">다이렉트 오토 메인</a></h2>
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">신차구매</li>
+                                        <li><a href="javascript:void(0)">다이렉트 신차할부</a></li>
+                                        <li><a href="javascript:void(0)">신차 카드일시불</a></li>
+                                    </ul>
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">중고차구매</li>
+                                        <li><a href="javascript:void(0)">다이렉트 중고차할부</a></li>
+                                        <li><a href="javascript:void(0)">중고차 카드일시불</a></li>
+                                    </ul>
+                                    <ul class="nav-box-ul">
+                                        <li class="nav-box-title">기타 서비스</li>
+                                        <li><a href="javascript:void(0)">오토멤버스클럽</a></li>
+                                        <li><a href="javascript:void(0)">자동차 근저당 설정 해지 안내</a></li>
+                                        <li><a href="javascript:void(0)">신차할부구매 안내</a></li>
+                                        <li><a href="javascript:void(0)">신차일시불구매 안내</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-head"><a href="">라이프</a>
+                            <!--gnb sub-->
+                            <div class="nav-box" >
+                                <div class="nav-box-in">
+                                    <h2><a href="javascript:void(0)">삼성카드 스토리</a></h2>
+                                    <h2><a href="javascript:void(0)">쿠폰박스</a></h2>
+                                    <h2><a href="javascript:void(0)">컬처멤버스클럽</a></h2>
+                                    <h2><a href="javascript:void(0)">생활앱</a></h2>
+                                    <h2><a href="javascript:void(0)">렌탈</a></h2>
+                                    <h2><a href="javascript:void(0)">쇼핑</a></h2>
+                                    <h2><a href="javascript:void(0)">국내제휴몰</a></h2>
+                                    <h2><a href="javascript:void(0)">여행</a></h2>
+                                    <h2><a href="javascript:void(0)">웨딩</a></h2>
+                                    <h2><a href="javascript:void(0)">열린나눔</a></h2>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-head"><a href="">고객센터</a>
+                            <!--gnb sub-->
+                            <div class="nav-box" >
+                                <div class="nav-box-in">
+                                    <h2><a href="javascript:void(0)">고객센터 종합안내</a></h2>
+                                    <h2><a href="javascript:void(0)">상담 안내/신청</a></h2>
+                                    <h2><a href="javascript:void(0)">해외 이용</a></h2>
+                                    <h2><a href="javascript:void(0)">금융소비자 안내</a></h2>
+                                    <h2><a href="javascript:void(0)">보안 설정</a></h2>
+                                    <h2><a href="javascript:void(0)">인증센터</a></h2>
+                                    <h2><a href="javascript:void(0)">뉴스/공지사항</a></h2>
+                                    <h2><a href="javascript:void(0)">자주 하는 질문(FAQ)</a></h2>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="search-btn">
+                        <img class="search-button" src="../assets/img/search-icon.png" alt="검색">
+                        <div class="search_sec">
+                            <form action="">
+                                <input type="text" name="" id="mainSearch" placeholder="카드, 메뉴, 혜택을 검색해 보세요" class="" maxlength="200" >
+                            </form>
+                        </div>
+                    </div> 
+                    
+                </nav>
+            </div>
+        </header>
+        <!--컨데이너-->
+        <div class="sumsungsub-container">
+            <div class="link-div">
+                <p class="me-home-link"><span class="me-home"></span>카드</p>
+            </div>
+            <!--서브페이지 상단 배너-->
+            <div class="sub-banner">
+                <!-- Swiper -->
+                <div class="swiper-container sub-swiper" >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide sub-banner1"><a href="javascript:void(0)"></a></div>
+                        <div class="swiper-slide sub-banner2"><a href="javascript:void(0)"></a></div>
+                        <div class="swiper-slide sub-banner3"><a href="javascript:void(0)"></a></div>
+                    </div>
+                </div>
+            </div>
+            <!--카드 찾기 비교함-->
+            <div class="top-box-flex">
+                <div class="top-box-width">
+                    <div class="search-card-box">
+                        <img src="../assets/img/card-search.png" alt="" class="search-card">
+                        <a href="javascript:void(0)">
+                            <ul>
+                                <li class="box-h2">내게 맞는 카드 찾기</li>
+                                <li class="box-p">카테고리 별로 원하는 카드를 추천받을 수 있어요</li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="comp-card-box">
+                        <img src="../assets/img/two-card.png" alt="" class="comp-card">
+                        <a href="javascript:void(0)">
+                            <ul>
+                                <li class="box-h2">카드비교함<span class="comp-number">2</span></li>
+                                <li class="box-p">비교함에 넣은 카드들을 한눈에 비교해보세요</li>
+                            </ul>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--카드 카테고리 목록-->
+            <div class="category-container">
+                <div class="category-box">
+                    <a href="javascript:void(0)">
+                        <ul>
+                            <li class="category-h">신용카드</li>
+                            <li class="category-p">
+                                내가 원하는 곳에서<br>
+                                찾을 수 있는 혜택
+                            </li>
+                        </ul>
+                        <img src="../assets/img/box-card1.png" alt="신용카드, 내가 원하는 곳에서 찾을 수 있는 혜택" class="category-img">
+                    </a>
+                </div>
+                <div class="category-box">
+                    <a href="javascript:void(0)">
+                        <ul>
+                            <li class="category-h">체크카드</li>
+                            <li class="category-p">
+                                계획대로 쓰는<br>
+                                똑똑한 습관
+                            </li>
+                        </ul>
+                        <img src="../assets/img/box-card2.png" alt="체크카드, 계획대로 쓰는 똑똑한 습관" class="category-img">
+                    </a>
+                </div>
+                <div class="category-box">
+                    <a href="javascript:void(0)">
+                        <ul>
+                            <li class="category-h">기프트카드</li>
+                            <li class="category-p">
+                                사랑과 감사의 마음을 담은<br>
+                                특별한 선물
+                            </li>
+                        </ul>
+                        <img src="../assets/img/box-card3.png" alt="기프트카드, 사랑과 감사의 마음을 담은 특별한 선물" class="category-img">
+                    </a>
+                </div>
+                <div class="category-box">
+                    <a href="javascript:void(0)">
+                        <ul>
+                            <li class="category-h">개인사업자카드</li>
+                            <li class="category-p">
+                                개인사업에 힘이 되는 혜택
+                            </li>
+                        </ul>
+                        <img src="../assets/img/box-card4.png" alt="개인사업자카드, 개인사업에 힘이 되는 혜택" class="category-img">
+                    </a>
+                </div>
+                <div class="category-box">
+                    <a href="javascript:void(0)">
+                        <ul>
+                            <li class="category-h">법인개별카드</li>
+                            <li class="category-p">
+                                기업과 임직원에게<br>
+                                꼭 필요한 혜택
+                            </li>
+                        </ul>
+                        <img src="../assets/img/box-card5.png" alt="법인개별카드, 기업과 임직원에게 꼭 필요한 혜택" class="category-img">
+                    </a>
+                </div>
+                <div class="category-box">
+                    <a href="javascript:void(0)">
+                        <ul>
+                            <li class="category-h">후불하이패스카드</li>
+                            <li class="category-p">
+                                빠르고 편리한 고속도로<br>
+                                통행료 전용 도로
+                            </li>
+                        </ul>
+                        <img src="../assets/img/box-card6.png" alt="후불하이패스카드, 빠르고 편리한 고속도로 통행료 전용 도로" class="category-img">
+                    </a>
+                </div>
+            </div>
+            <!--서브페이지 카드 리스트-->
+            <div class="sub-card-container">
+                <!--서브 카드 카테고리-->
+                <div class="sub-card-category">
+                    <ul class="name-category">
+                        <li><a href="javascript:void(0)">할인형</a></li>
+                        <li><a href="javascript:void(0)">포인트형</a></li>
+                        <li><a href="javascript:void(0)">교육/의료</a></li>
+                        <li><a href="javascript:void(0)">마트/통신</a></li>
+                        <li><a href="javascript:void(0)">쇼핑</a></li>
+                        <li><a href="javascript:void(0)">커피·외식/문화·레저</a></li>
+                        <li><a href="javascript:void(0)">주유/렌탈·생활</a></li>
+                    </ul>
+                </div>
+                <!--카드목록 노출-->
+                <!--전체-->
+                <div class="mb40 sub-bootmbox">
+                    <div class="sub-list-box cate1 cate6">
+                        <div class="list-row">
+                            <a href="javascript:void(0)">
+                                <img src="../assets/img/sub1.png" alt="삼성 iD ENERGY 카드, 온라인 간편결제 5% 할인" class="sub-img">
+                                <ul class="card-data">
+                                    <li class="sub-h">삼성 iD ENERGY 카드</li>
+                                    <li class="sub-p">온라인 간편결제 5% 할인</li>
+                                    <li>
+                                        <ul class="sub-benefit">
+                                            <li><span class="easy-pay ssize"></span>간편결제 5% 할인</li>
+                                            <li><span class="wifi ssize"></span>넷플릭스·멜론 50% 할인</li>
+                                            <li><span class="shop ssize"></span>CU·올리브영 10% 할인</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="list-btnbox">
+                            <ul>
+                                <li class="btn-cart"><button type="button"><span class="plus43"></span>비교함담기</button></li>
+                                <li class="btn-look"><button type="button">자세히보기</button></li>
+                                <li class="btn-request"><button type="button">카드신청</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-list-box cate1 cate2 cate6">
+                        <div class="list-row">
+                            <a href="javascript:void(0)">
+                                <img src="../assets/img/sub2.png" alt="삼성 iD ENERGY 카드, 온라인 간편결제 5% 할인" class="sub-img">
+                                <ul class="card-data">
+                                    <li class="sub-h">삼성 iD ON 카드</li>
+                                    <li class="sub-p">맛있는 시간엔 30% 자동 맞춤 할인</li>
+                                    <li>
+                                        <ul class="sub-benefit">
+                                            <li><span class="often ssize"></span><span>많이 쓰는 영역 자동 맞춤<br> 30% 할인</span> <br>
+                                            </li>
+                                            <li><span class="money ssize"></span><span>교통·이동통신·스트리밍<br>   10% 할인</span> <br>
+                                            </li>
+                                            <li><span class="pro ssize"></span><span>온라인 간편결제·해외<br>  3%·1% 할인</span> <br>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="list-btnbox">
+                            <ul>
+                                <li class="btn-cart"><button type="button"><span class="plus43"></span>비교함담기</button></li>
+                                <li class="btn-look"><button type="button">자세히보기</button></li>
+                                <li class="btn-request"><button type="button">카드신청</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-list-box cate3 cate5">
+                        <div class="list-row">
+                            <a href="javascript:void(0)">
+                                <img src="../assets/img/sub3.png" alt="삼성 iD ENERGY 카드, 온라인 간편결제 5% 할인" class="sub-img">
+                                <ul class="card-data">
+                                    <li class="sub-h">신세계 아울렛 BENEFIT 삼성카드</li>
+                                    <li class="sub-p">만원만 주유해도, 만원할인!</li>
+                                    <li>
+                                        <ul class="sub-benefit">
+                                            <li><span class="cart ssize"></span><span>신세계사이먼 프리미엄 아울렛<br> 10%  쇼핑 할인</span> <br>
+                                            </li>
+                                            <li><span class="cart ssize"></span><span>할인점·슈퍼마켓·편의점<br>   7% 할인</span> 
+                                            </li>
+                                            <li><span class="heart ssize"></span> <span>신세계백화점 제휴 서비스</span> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="list-btnbox">
+                            <ul>
+                                <li class="btn-cart"><button type="button"><span class="plus43"></span>비교함담기</button></li>
+                                <li class="btn-look"><button type="button">자세히보기</button></li>
+                                <li class="btn-request"><button type="button">카드신청</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-list-box cate3 cate5">
+                        <div class="list-row">
+                            <a href="javascript:void(0)">
+                                <img src="../assets/img/sub4.png" alt="모니모 카드, 스타벅스 50%, 스트리밍 30% 결제 할인" class="sub-img">
+                                <ul class="card-data">
+                                    <li class="sub-h">모니모 카드</li>
+                                    <li class="sub-p">스타벅스 50%, 스트리밍 30% 결제 할인</li>
+                                    <li>
+                                        <ul class="sub-benefit">
+                                            <li><span class="easy-pay ssize"></span><span>배달앱·이동통신·대중교통<br> 10% 할인</span> <br>
+                                            </li>
+                                            <li><span class="starbucks ssize"></span><span>스타벅스 50%, 스트리밍<br> 30% 할인</span> 
+                                            </li>
+                                            <li><span class="heart ssize"></span> <span>편의점·다이소·올리브영<br> 7% 할인</span> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="list-btnbox">
+                            <ul>
+                                <li class="btn-cart"><button type="button"><span class="plus43"></span>비교함담기</button></li>
+                                <li class="btn-look"><button type="button">자세히보기</button></li>
+                                <li class="btn-request"><button type="button">카드신청</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-list-box cate2 cate4">
+                        <div class="list-row">
+                            <a href="javascript:void(0)">
+                                <img src="../assets/img/sub5.png" alt="카카오페이신용카드, 카카오톡 선물,결제 할인 및 적립" class="sub-img">
+                                <ul class="card-data">
+                                    <li class="sub-h">카카오페이신용카드</li>
+                                    <li class="sub-p">스타벅스 50%, 스트리밍 30% 결제 할인</li>
+                                    <li>
+                                        <ul class="sub-benefit">
+                                            <li><span class="easy-pay ssize"></span><span>톡 선물하기 카카오페이로 결제 시 <br> 3% 할인</span> <br>
+                                            </li>
+                                            <li><span class="wifi ssize"></span><span>카카오페이로 결제 시 2%</span> 
+                                            </li>
+                                            <li><span class="air ssize"></span> <span>국내외 1% 적립</span> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="list-btnbox">
+                            <ul>
+                                <li class="btn-cart"><button type="button"><span class="plus43"></span>비교함담기</button></li>
+                                <li class="btn-look"><button type="button">자세히보기</button></li>
+                                <li class="btn-request"><button type="button">카드신청</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-list-box cate2 cate4">
+                        <div class="list-row">
+                            <a href="javascript:void(0)">
+                                <img src="../assets/img/sub6.png" alt="삼성 iD MOVE 카드, 교통, 통신 커피 등 생활 곳곳 월 최대 30,000원 할인" class="sub-img">
+                                <ul class="card-data">
+                                    <li class="sub-h">삼성 iD MOVE 카드</li>
+                                    <li class="sub-p">교통, 통신, 커피 등 생활 곳곳 월 최대 30,000원 할인</li>
+                                    <li>
+                                        <ul class="sub-benefit">
+                                            <li><span class="car ssize"></span><span>대중교통·택시 10% 할인</span> <br>
+                                            </li>
+                                            <li><span class="wifi ssize"></span><span>이동통신·스트리밍 10% 할인</span> 
+                                            </li>
+                                            <li><span class="starbucks ssize"></span> <span>커피전문점·편의점 10% 할인</span> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="list-btnbox">
+                            <ul>
+                                <li class="btn-cart"><button type="button"><span class="plus43"></span>비교함담기</button></li>
+                                <li class="btn-look"><button type="button">자세히보기</button></li>
+                                <li class="btn-request"><button type="button">카드신청</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-list-box cate3 cate7">
+                        <div class="list-row">
+                            <a href="javascript:void(0)">
+                                <img src="../assets/img/sub7.png" alt="삼성 iD MOVE 카드, 교통, 통신 커피 등 생활 곳곳 월 최대 30,000원 할인" class="sub-img">
+                                <ul class="card-data">
+                                    <li class="sub-h">삼성카드 달달할인</li>
+                                    <li class="sub-p">정기결제 10% 할인에 전월 이용금액 포함까지!</li>
+                                    <li>
+                                        <ul class="sub-benefit">
+                                            <li><span class="money ssize"></span><span>아파트관리비·이동통신·렌탈<br> 10% 할인</span> <br>
+                                            </li>
+                                            <li><span class="cart ssize"></span><span>할인점·주유·의료 5%</span> 
+                                            </li>
+                                            <li><span class="wifi ssize"></span> <span>스트리밍·온라인쇼핑몰<br> 멤버십 50% 할인</span> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="list-btnbox">
+                            <ul>
+                                <li class="btn-cart"><button type="button"><span class="plus43"></span>비교함담기</button></li>
+                                <li class="btn-look"><button type="button">자세히보기</button></li>
+                                <li class="btn-request"><button type="button">카드신청</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-list-box cate5 cate7">
+                        <div class="list-row">
+                            <a href="javascript:void(0)">
+                                <img src="../assets/img/sub8.png" alt="삼성카드 & MILEAGE , 어디서나 1천원당 1마일, 백화점 주유 2마일 적립" class="sub-img">
+                                <ul class="card-data">
+                                    <li class="sub-h">삼성카드 & MILEAGE </li>
+                                    <li class="sub-p">어디서나 1천원당 1마일<br> 백화점 주유 2마일 적립!</li>
+                                    <li>
+                                        <ul class="sub-benefit">
+                                            <li><span class="shop ssize"></span><span>모든 가맹점 1마일 적립</span> <br>
+                                            </li>
+                                            <li><span class="gas ssize"></span><span>백화점·주유·택시 2마일 적립</span> 
+                                            </li>
+                                            <li><span class="juce ssize"></span> <span>인천공항 라운지 이용 무료</span> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="list-btnbox">
+                            <ul>
+                                <li class="btn-cart"><button type="button"><span class="plus43"></span>비교함담기</button></li>
+                                <li class="btn-look"><button type="button">자세히보기</button></li>
+                                <li class="btn-request"><button type="button">카드신청</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+            
+        </div>
+        <!--푸터-->
+        <footer class="">
+            <div class="footer">
+                <div class="footer-flex">
+                    <div class="notice">
+                        <h2 class="footer-h2"><a href="javascript:void(0)">공지사항</a> </h2>
+                        <ul>
+                            <li><a href="javascript:void(0)">시스템 업그레이드에 따른 서비스 일시 중단 예정입니다.</a><span class="notice-day">22.03.02</span></li>
+                            <li><a href="javascript:void(0)">2022년 삼성카드 CS패널 모집 안내드립니다.</a><span class="notice-day">21.12.06</span></li>
+                            <li><a href="javascript:void(0)">한국서비스품질지수(KS-SQI) 8년 연속 상단에 배치</a><span class="notice-day">21.07.01</span></li>
+                        </ul>
+                    </div>
+                    <div class="ask-service">
+                        <h2 class="footer-h2"><a href="javascript:void(0)">상담 서비스</a> </h2>
+                        <ul class="ask-sec">
+                            <li><a href="javascript:void(0)"><span class="foot-chating"></span>챗봇샘</a></li>
+                            <li><a href="javascript:void(0)"><span class="foot-sms"></span>문자 상담</a></li>
+                            <li><a href="javascript:void(0)"><span class="foot-email"></span>이메일 상담</a></li>
+                        </ul>
+                        <ul class="mt30">
+                            <li class="footer-h2"><a href="javascript:void(0)">금융소비자 보호</a> </li>
+                            <li class="footer-asp">금융소비자를 위한 다양한 정보, 소비자보호포털에서 확인하세요</li>
+                        </ul>
+                    </div>
+                    <div class="ask-center">
+                        <ul class="center-sec">
+                            <li class="footer-h22">고객센터</li>
+                            <li class="number">1588-1688</li>
+                        </ul>
+                        <ul class="phone-number-ul">
+                            <li>카드신청<span>1688-1133</span></li>
+                            <li>분실신고 · 한도승인 국내 <span>1588-8900</span></li>
+                            <li>분실신고 · 한도승인 해외
+                                <span>
+                                    82-2-2000-8100,<br>
+                                    800-1588-8700</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="foot-line"></div>
+                <div class="foot-bottom">
+                    <ul class="bottom-text">
+                        <li><a href="javascript:void(0)">회사소개</a></li>
+                        <li><a href="javascript:void(0)">전자민원접수</a></li>
+                        <li><a href="javascript:void(0)">이용약관</a></li>
+                        <li><a href="javascript:void(0)">상품공시실</a></li>
+                        <li><a href="javascript:void(0)">고객권리 안내</a></li>
+                        <li><a href="javascript:void(0)">금융사기피해예방</a></li>
+                        <li><a href="javascript:void(0)">개인정보 처리방침</a></li>
+                        <li><a href="javascript:void(0)">위치기반서비스 이용약관</a></li>
+                    </ul>
+                    <ul class="bottom-text mt24">
+                        <li>대표이사 사장 김대환</li>
+                        <li>서울 중구 세종대로 67(04514)</li>
+                        <li>사업자등록번호 202-81-45602</li>
+                        <li>통신판매업 신고번호 제 2009-서울중구-1449호</li>
+                    </ul>
+                    <div class="reserved mt14">© SAMSUNG CARD CO., LTD. All rights reserved.</div>
+                    <ul class="foot-kcb">
+                        <li><a href="javascript:void(0)"><img src="../assets/img/foot1.png" alt="한국산업고객만족도6년연속 1위"></a></li>
+                        <li><a href="javascript:void(0)"><img src="../assets/img/foot2.png" alt="국가고객만족도 8년 연속 1위"></a></li>
+                        <li><a href="javascript:void(0)"><img src="../assets/img/foot3.png" alt="2021 정보 접근성 품질인증"></a></li>
+                        <li><a href="javascript:void(0)"><img src="../assets/img/foot4.png" alt="한국서비스대상 명예의 전당"></a></li>
+                        <li><a href="javascript:void(0)"><img src="../assets/img/foot5.png" alt="고객만족경영대상 명예의 전당"></a></li>
+                        <li><a href="javascript:void(0)"><img src="../assets/img/foot6.png" alt="마드결제산업 데이터보안표준 인증"></a></li>
+                        <li><a href="javascript:void(0)"><img src="../assets/img/foot7.png" alt="정보보호/개인정보 관리체계 인증"></a></li>
+                        <li><a href="javascript:void(0)"><img src="../assets/img/foot8.png" alt="한국서비스품질지수 8년 연속1위"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

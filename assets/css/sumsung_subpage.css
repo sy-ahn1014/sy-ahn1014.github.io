@@ -1,0 +1,326 @@
+.sumsungsub-container{}
+
+.link-div{
+    margin: 0 auto;
+    width:1200px;
+    height:40px;
+}
+.me-home-link{
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 40px;
+}
+.me-home{
+    vertical-align: text-bottom;
+    margin-right: 24px;
+    position: relative;
+    display: inline-block;
+    width:18px;
+    height:18px;
+    background: url('../img/me-home.png') no-repeat center/contain;
+}
+.me-home:after{
+    position: absolute;
+    right: -16px;
+    top: 5px;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #666;
+    border-right: 1px solid #666;
+    transform: rotate(45deg);
+}
+/*서브배너*/
+.swiper-slide>a{
+    width:100%;
+    height:100%;
+}
+.sub-banner{
+    width:100%;
+    height:315px;
+}
+.sub-swiper{
+    width:100%;
+    height:100%;
+}
+.sub-banner1{
+    background:url('../img/sub-banner1.png') no-repeat center/cover;
+}
+.sub-banner2{
+    background:url('../img/sub-banner2.png') no-repeat center/cover;
+}
+.sub-banner3{
+    background:url('../img/sub-banner3.png') no-repeat center/cover;
+}
+
+/*카드 찾기 비교함*/
+.top-box-flex{
+    width:100%;
+    background-color:#F5F5F5;
+    
+}
+.top-box-width{
+    width:1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-card-box{
+    flex:1;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-card-box>a{
+    width: 100%;
+    padding: 18px 0;
+}
+.search-card-box>a>ul{
+    width: 100%;
+    position: relative;
+}
+.search-card-box>a>ul:after{
+    position: absolute;
+    right: -16px;
+    top: 5px;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #747474;
+    border-right: 2px solid #747474;
+    transform: rotate(45deg);
+}
+.search-card{
+    width:40px;
+    height:40px;
+    margin-right: 14px;
+}
+.comp-card-box{
+    flex:1;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.comp-card-box>a{
+    width: 100%;
+    padding: 18px 0;
+}
+.comp-card-box>a>ul{
+    width: 100%;
+    position: relative;
+}
+.comp-card-box>a>ul:after{
+    position: absolute;
+    right: -16px;
+    top: 5px;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #747474;
+    border-right: 2px solid #747474;
+    transform: rotate(45deg);
+}
+.comp-card{
+    width:45px;
+    height:45px;
+    margin-right: 14px;
+}
+.box-h2{
+    font-size: 20px;
+    font-weight: 700;
+}
+.comp-number{
+    vertical-align: top;
+    margin-left: 6px;
+    width:20px;
+    height:20px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+    display: inline-block;
+    background-color: #2196F3;
+    border-radius: 10px;
+    color: #fff;
+}
+.box-p{
+    font-size: 16px;
+    line-height: 26px;
+}
+
+/*카테고리 박스*/
+.category-container{
+    width:1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.category-box{
+    margin-bottom: 12px;
+    width:384px;
+    height:177px;
+    border-radius: 30px;
+    box-shadow: 3px 8px 14px 0px rgb(0 0 0 / 14%);
+}
+.category-box>a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.category-h{
+    font-size: 24px;
+    font-weight: 700;
+}
+.category-p{
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 24px;
+}
+.category-img{
+    width:70px;
+    height:70px;
+}
+
+/*서브 카드 리스트*/
+.sub-card-container{
+    width:1200px;
+    margin: 0 auto;
+}
+
+.sub-card-category{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.name-category{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.name-category>li{
+    
+    border:1px solid #c4c4c4;
+    border-radius: 100px;
+}
+.name-category>li.active>a{
+    color: #fff;
+    background-color: #c4c4c4;
+}
+.name-category>li>a{
+    border-radius: 100px;
+    padding: 13px 34px;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.sub-list-box{
+    border-bottom: 1px solid #C4C4C4;
+    padding: 40px 0;
+}
+
+
+.list-row{
+    
+}
+.list-row>a{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.card-data{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.sub-img{
+    margin-right: 55px;
+    width:290px;
+    height:182px;
+}
+.sub-h{
+    margin-bottom: 14px;
+    font-size: 24px;
+    font-weight: 700;
+}
+.sub-p{
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+.sub-benefit{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.sub-benefit>li{
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+.sub-benefit>li>em{
+    color: #2E81F8;
+    font-weight: bold;
+}
+
+.ssize{
+    margin-right: 8px;
+    margin-bottom: 3px;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.list-btnbox>ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.list-btnbox>ul>li>button{
+    border-radius: 6px;
+    padding: 14px 30px;
+    text-align: center;
+    font-size: 18px;
+}
+.plus43{
+    margin-right: 4px;
+    vertical-align: text-bottom;
+    margin-bottom: 1px;
+    width:20px;
+    height:20px;
+    display: inline-block;
+    background: url('../img/plus43.png') no-repeat center/contain;
+}
+.btn-cart{
+    margin-right: 18px;
+    border-radius: 6px;
+    border: 1px solid #434343;
+}
+.btn-look{
+    margin-right: 18px;
+    border-radius: 6px;
+    background-color: #666666;
+    
+}
+.btn-look>button{
+    color: #fff;
+}
+.btn-request{
+    border-radius: 6px;
+    background-color: #2E81F8;
+    color: #fff;
+}
+.btn-request>button{
+    color: #fff;
+}

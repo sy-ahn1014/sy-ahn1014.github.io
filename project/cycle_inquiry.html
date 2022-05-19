@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울자전거 따릉이 - 무인대여시스템</title>
+    <meta name="title" content="서울자전거 따릉이 - 무인대여시스템">
+    <meta name="keywords" content=" 저탄소 자전거, 자전거, 서울 자전거, 따릉이, 서울 따릉이">
+    <meta name="description" content="누구나 쉽고 편리하게 이용할 수 있는 저탄소 이동수단 서울자전거 따릉이">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/samsung.ico">
+    <!--common-->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/cycle_common.css">
+    <link rel="stylesheet" href="../assets/css/cycle_inquiry.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--swiper-->
+    <link rel="stylesheet" href="../assets/css/swiper.min.css"/>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('.btnMenu_m').click(function() {
+                $(".monav_black").fadeIn(300);
+            });
+            
+            $('.btnclose_m').click(function() {
+                $(".monav_black").fadeOut(300);
+            });
+
+
+
+            });
+    </script>
+
+</head>
+<body>
+    <!--헤더-->
+    <header id="header">
+        <div class="header-top pc-on">
+            <div class="header-language">
+                <ul>
+                    <li><a href="javascript:void(0)">ENGLISH</a></li>
+                    <li><a href="javascript:void(0)">中國語</a></li>
+                    <li><a href="javascript:void(0)">日本語</a></li>
+                    <li><a href="javascript:void(0)">한국어</a></li>
+                </ul>
+            </div>
+            <div class="header-login">
+                <ul>
+                    <li><a href="cycle_login.html">로그인</a></li>
+                    <li><a href="javascript:void(0)">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <h1><img src="../assets/img/cycle-logo.png" alt="서울자전거 따릉이 로고"></h1>
+            <nav class="nav ">
+                <ul class="nav_pc">
+                    <li><a href="cycle_inquiry.html">대여소 조회</a></li>
+                    <li><a href="cycle_ticket.html">이용권 구매</a></li>
+                    <li><a href="cycle_notice.html">공지사항</a></li>
+                    <li><a href="cycle_qna.html">문의하기</a></li>
+                </ul>
+                <a class="sitemap btnMenu_m"></a>
+                <div class="monav_black">
+                    <div class="monav_warp" >
+                        <a class="close_m btnclose_m"></a>
+                        <ul class="mo-login">
+                            <li><a href="cycle_login.html" style="font-weight: 700;">로그인</a></li>
+                            <li><a href="" style="color:#747474;">회원가입</a></li>
+                        </ul>
+                        <ul class="mo-nav">
+                            <li><a href="cycle_inquiry.html">대여소 조회</a></li>
+                            <li><a href="cycle_ticket.html">이용권 구매</a></li>
+                            <li><a href="cycle_notice.html">공지사항</a></li>
+                            <li><a href="cycle_qna.html">문의하기</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </nav>
+        </div>
+    </header>
+    <!--컨데이너-->
+    <div class="cycle-maincontainer" >
+        <h2 class="container_h">대여소 조회</h2>
+        <div class="wid1400-con mb100">
+            <div class="container-pos">
+                <div class="next-txt">
+                    <div class="leftBox">
+                        <div class="top-srh">
+                            <form action="">
+                                <input type="text" id="qna-srh" class="qna-srh" placeholder="검색어를 입력해 주세요.">
+                                <button type="button" class="qna-btn"></button>
+                            </form>
+                        </div>
+                        <ul class="txt-Box">
+                            <li class="txtB">2231. 삼성타운(삼성생명) A동 맞은편 (구)</li>
+                            <li>
+                                <ul class="information">
+                                    <li class="cycle-t">뉴 따릉이<span class="nuM">20</span> </li>
+                                    <li class="cycle-t">새싹 따릉이<span class="nuM">7</span> </li>
+                                    <li class="rent-btn">대여하기</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="txt-Box">
+                            <li class="txtB">2407. 역삼.서초.삼성 세무서 앞 (역삼빌딩 앞)</li>
+                            <li>
+                                <ul class="information">
+                                    <li class="cycle-t">뉴 따릉이<span class="nuM">1</span> </li>
+                                    <li class="cycle-t">새싹 따릉이<span class="nuM">0</span> </li>
+                                    <li class="rent-btn2">대여하기</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="txt-Box">
+                            <li class="txtB">2515.서초초등학교 후문 (신)</li>
+                            <li>
+                                <ul class="information">
+                                    <li class="cycle-t">뉴 따릉이<span class="nuM">0</span> </li>
+                                    <li class="cycle-t">새싹 따릉이<span class="nuM">4</span> </li>
+                                    <li class="rent-btn2">대여하기</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                    
+                </div>
+                <div class="next-right">
+                    <ul class="stock-box">
+                        <li class="gray">0대</li>
+                        <li class="red">1~5대 이하</li>
+                        <li class="yellow">19대 이하</li>
+                        <li class="green">20대 이상</li>
+                    </ul>
+                    
+                </div>
+                <div class="reset"><img src="../assets/img/reset.svg" alt="리셋"></div>
+                <div class="map-container">
+                    <!-- Kakao Map API Key -->
+                    <div id="map" style="width:1400px; height:684px; margin: 0 auto; margin-bottom:200px; background-color: #c4c4c4;"></div>
+                    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	67910e3bd90025c6f86dcfa617bddc2d"></script>
+                    <script>
+                        var container = document.getElementById('map');
+                        var options = {
+                        center: new kakao.maps.LatLng(37.498661344818416, 127.03094642205275),
+                    };
+    
+                    var map = new kakao.maps.Map(container, options);
+    
+                    // 마커가 표시될 위치입니다 
+                    var markerPosition  = new kakao.maps.LatLng(37.498661344818416, 127.03094642205275); 
+    
+                    // 마커를 생성합니다
+                    var marker = new kakao.maps.Marker({
+                        position: markerPosition
+                    });
+    
+                    // 마커가 지도 위에 표시되도록 설정합니다
+                    marker.setMap(map);
+    
+                    // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+                    // marker.setMap(null);   
+                    </script> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--푸터-->
+    <footer class="footer">
+        <div class="footer-warp">
+            <div class="foot-top">
+                <ul class="foot-left">
+                    <li><a href="javascript:void(0)">이용약관</a></li>
+                    <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+                    <li><a href="javascript:void(0)">보험안내</a></li>
+                    <li><a href="javascript:void(0)">도움주신 분</a></li>
+                </ul>
+                <ul class="foot-right">
+                    <li class="foot-ico insta"><a href="javascript:void(0)"></a></li>
+                    <li class="foot-ico face"><a href="javascript:void(0)"></a></li>
+                    <li class="foot-ico blog"><a href="javascript:void(0)"></a></li>
+                </ul>
+            </div>
+            <div class="foot-bottom">
+                    <ul>
+                        <li>서울특별시 중구 세종대로 110 서울특별시  </li>
+                        <li>대표자 오세훈</li>
+                        <li>Tel : 1599-0120</li>
+                    </ul>
+                    <ul>
+                        <li>사업자등록번호 : 104-83-00469</li>
+                        <li>우편번호 04524</li>
+                    </ul>
+                    <p>COPYRIGHT ⓒ 2018 bikeseoul All RIGHTS RESERVED.</p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>
