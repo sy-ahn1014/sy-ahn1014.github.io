@@ -601,9 +601,19 @@
     width:100%;
     height:100%;
 }
+.work-imgwarp{
+    width: 100%;
+    height:320px;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+}
 .work-img{
     width: 100%;
     border-radius: 15px 15px 0 0;
+    transition: all 0.3s;
+}
+.work-img:hover{
+    transform:scale(1.1);  
 }
 .workbody-card{
     flex: 1 1 auto;
