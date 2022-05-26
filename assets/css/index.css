@@ -462,6 +462,7 @@
 }
 .project_cul{
     width:200px;
+    margin-bottom: 26px;
 }
 .logo_click{
     display: block;
@@ -858,6 +859,13 @@
     .sub-tbox{
         width: 100%;
     }
+
+    .project_Center{
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .key_w{}
     
 }
 @media (max-width: 910px){
