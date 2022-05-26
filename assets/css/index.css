@@ -458,7 +458,8 @@
     width:65%;
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .project_cul{
     width:200px;
